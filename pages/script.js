@@ -517,7 +517,18 @@ function updateCheckoutState() {
 // ========================================
 // اجرای اولیه
 // ========================================
-
 updateCartCount();
 
 renderCart();
+
+
+// ========================================
+// دسترسی دکمه‌های HTML به توابع سبد خرید
+// ========================================
+
+window.addToCart = addToCart;
+window.removeFromCart = removeFromCart;
+window.changeQuantity = changeQuantity;
+window.updateCartCount = updateCartCount;
+window.calculateCartTotal = calculateCartTotal;
+window.formatPrice = formatPrice;
