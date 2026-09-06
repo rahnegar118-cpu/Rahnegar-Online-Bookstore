@@ -1,4 +1,3 @@
-```javascript
 // ========================================
 // Rahnegar Bookstore
 // Main JavaScript
@@ -11,9 +10,27 @@ console.log("رهنگر با موفقیت اجرا شد.");
 // سبد خرید
 // ========================================
 
-let cart = JSON.parse(
-    localStorage.getItem("rahnegarCart")
-) || [];
+let cart = [];
+
+try {
+    const savedCart = localStorage.getItem("rahnegarCart");
+
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+
+    if (!Array.isArray(cart)) {
+        cart = [];
+    }
+
+} catch (error) {
+
+    console.log("سبد قبلی خراب بود و پاک شد.");
+
+    cart = [];
+
+    localStorage.removeItem("rahnegarCart");
+}
 
 
 // ========================================
@@ -42,12 +59,12 @@ function updateCartCount() {
     if (!cartCount) return;
 
     const count = cart.reduce(
-        (total, item) =>
-            total + item.quantity,
+        (total, item) => total + (item.quantity || 0),
         0
     );
 
-    cartCount.textContent = count.toLocaleString("fa-IR");
+    cartCount.textContent =
+        count.toLocaleString("fa-IR");
 
 }
 
@@ -58,11 +75,11 @@ function updateCartCount() {
 
 function addToCart(book) {
 
-    const existingBook =
-        cart.find(
-            item => item.id === book.id
-        );
+    console.log("افزودن به سبد:", book);
 
+    const existingBook = cart.find(
+        item => item.id === book.id
+    );
 
     if (existingBook) {
 
@@ -71,21 +88,20 @@ function addToCart(book) {
     } else {
 
         cart.push({
-
-            ...book,
-
+            id: book.id,
+            title: book.title,
+            author: book.author || "",
+            price: Number(book.price),
             quantity: 1
-
         });
 
     }
-
 
     saveCart();
 
     updateCartCount();
 
-    alert("کتاب به سبد خرید اضافه شد.");
+    alert("کتاب «" + book.title + "» به سبد خرید اضافه شد.");
 
 }
 
@@ -102,9 +118,9 @@ function removeFromCart(bookId) {
 
     saveCart();
 
-    renderCart();
-
     updateCartCount();
+
+    renderCart();
 
 }
 
@@ -113,22 +129,15 @@ function removeFromCart(bookId) {
 // تغییر تعداد
 // ========================================
 
-function changeQuantity(
-    bookId,
-    change
-) {
+function changeQuantity(bookId, change) {
 
-    const book =
-        cart.find(
-            item => item.id === bookId
-        );
-
+    const book = cart.find(
+        item => item.id === bookId
+    );
 
     if (!book) return;
 
-
     book.quantity += change;
-
 
     if (book.quantity <= 0) {
 
@@ -138,12 +147,11 @@ function changeQuantity(
 
     }
 
-
     saveCart();
 
-    renderCart();
-
     updateCartCount();
+
+    renderCart();
 
 }
 
@@ -156,13 +164,12 @@ function calculateCartTotal() {
 
     return cart.reduce(
 
-        (total, item) =>
+        (total, item) => {
 
-            total +
-            (
-                item.price *
-                item.quantity
-            ),
+            return total +
+                (Number(item.price) * Number(item.quantity));
+
+        },
 
         0
 
@@ -196,12 +203,11 @@ function renderCart() {
     const totalElement =
         document.getElementById("cart-total");
 
-
-    // اگر صفحه سبد خرید نیست
     if (!cartContainer) return;
 
 
     // سبد خالی
+
     if (cart.length === 0) {
 
         cartContainer.innerHTML = `
@@ -227,7 +233,6 @@ function renderCart() {
 
         `;
 
-
         if (totalElement) {
 
             totalElement.textContent =
@@ -236,65 +241,63 @@ function renderCart() {
         }
 
         return;
-
     }
 
 
     // نمایش کتاب‌ها
 
-    cartContainer.innerHTML =
-        cart.map(item => `
+    cartContainer.innerHTML = cart.map(item => `
 
-            <div class="cart-item">
+        <div class="cart-item">
 
-                <div class="cart-item-info">
+            <div class="cart-item-info">
 
-                    <h3>
-                        ${item.title}
-                    </h3>
+                <h3>
+                    ${item.title}
+                </h3>
 
-                    <p>
-                        ${item.author || ""}
-                    </p>
+                <p>
+                    ${item.author || ""}
+                </p>
 
-                    <strong>
-                        ${formatPrice(item.price)}
-                    </strong>
+                <strong>
+                    ${formatPrice(item.price)}
+                </strong>
 
-                </div>
+            </div>
 
 
-                <div class="cart-quantity">
-
-                    <button
-                        onclick="changeQuantity(${item.id}, 1)"
-                    >
-                        +
-                    </button>
-
-                    <span>
-                        ${item.quantity}
-                    </span>
-
-                    <button
-                        onclick="changeQuantity(${item.id}, -1)"
-                    >
-                        −
-                    </button>
-
-                </div>
-
+            <div class="cart-quantity">
 
                 <button
-                    class="remove-cart"
-                    onclick="removeFromCart(${item.id})"
+                    onclick="changeQuantity(${item.id}, 1)"
                 >
-                    حذف
+                    +
+                </button>
+
+                <span>
+                    ${item.quantity}
+                </span>
+
+                <button
+                    onclick="changeQuantity(${item.id}, -1)"
+                >
+                    −
                 </button>
 
             </div>
 
-        `).join("");
+
+            <button
+                class="remove-cart"
+                onclick="removeFromCart(${item.id})"
+            >
+                حذف
+            </button>
+
+        </div>
+
+    `).join("");
 
 
     if (totalElement) {
@@ -316,4 +319,3 @@ function renderCart() {
 updateCartCount();
 
 renderCart();
-```
