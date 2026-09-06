@@ -1,236 +1,4 @@
-// ========================================
-// RAHNEGAR BOOKSTORE
-// Main JavaScript
-// ========================================
-
-
-// ========================================
-// سبد خرید
-// ========================================
-
-let cart = [];
-
-try {
-
-    const savedCart =
-        localStorage.getItem("rahnegarCart");
-
-    if (savedCart) {
-        cart = JSON.parse(savedCart);
-    }
-
-    if (!Array.isArray(cart)) {
-        cart = [];
-    }
-
-} catch (error) {
-
-    console.log("خطا در خواندن سبد خرید");
-
-    cart = [];
-
-    localStorage.removeItem("rahnegarCart");
-
-}
-
-
-// ========================================
-// ذخیره سبد
-// ========================================
-
-function saveCart() {
-
-    localStorage.setItem(
-        "rahnegarCart",
-        JSON.stringify(cart)
-    );
-
-}
-
-
-// ========================================
-// تعداد کل کالاها
-// ========================================
-
-function updateCartCount() {
-
-    const cartCount =
-        document.getElementById("cart-count");
-
-    if (!cartCount) {
-        return;
-    }
-
-    const count =
-        cart.reduce(
-            (total, item) =>
-                total + Number(item.quantity || 0),
-            0
-        );
-
-    cartCount.textContent =
-        count.toLocaleString("fa-IR");
-
-}
-
-
-// ========================================
-// افزودن کتاب
-// ========================================
-
-function addToCart(book) {
-
-    const existingBook =
-        cart.find(
-            item =>
-                Number(item.id) ===
-                Number(book.id)
-        );
-
-    if (existingBook) {
-
-        existingBook.quantity =
-            Number(existingBook.quantity || 0) + 1;
-
-    } else {
-
-        cart.push({
-
-            id: Number(book.id),
-
-            title: book.title || "بدون عنوان",
-
-            author: book.author || "",
-
-            publisher:
-                book.publisher ||
-                book.nashir ||
-                "",
-
-            price:
-                Number(book.price) || 0,
-
-            quantity: 1
-
-        });
-
-    }
-
-    saveCart();
-
-    updateCartCount();
-
-    alert(
-        "کتاب «" +
-        book.title +
-        "» به سبد خرید اضافه شد."
-    );
-
-}
-
-
-// ========================================
-// حذف کتاب
-// ========================================
-
-function removeFromCart(bookId) {
-
-    cart =
-        cart.filter(
-            item =>
-                Number(item.id) !==
-                Number(bookId)
-        );
-
-    saveCart();
-
-    updateCartCount();
-
-    renderCart();
-
-}
-
-
-// ========================================
-// تغییر تعداد
-// ========================================
-
-function changeQuantity(bookId, change) {
-
-    const book =
-        cart.find(
-            item =>
-                Number(item.id) ===
-                Number(bookId)
-        );
-
-    if (!book) {
-        return;
-    }
-
-    book.quantity =
-        Number(book.quantity || 0) +
-        Number(change);
-
-    if (book.quantity <= 0) {
-
-        cart =
-            cart.filter(
-                item =>
-                    Number(item.id) !==
-                    Number(bookId)
-            );
-
-    }
-
-    saveCart();
-
-    updateCartCount();
-
-    renderCart();
-
-}
-
-
-// ========================================
-// مبلغ کل
-// ========================================
-
-function calculateCartTotal() {
-
-    return cart.reduce(
-
-        (total, item) => {
-
-            return total +
-                (
-                    Number(item.price || 0) *
-                    Number(item.quantity || 0)
-                );
-
-        },
-
-        0
-    );
-
-}
-
-
-// ========================================
-// فرمت قیمت
-// ========================================
-
-function formatPrice(price) {
-
-    return (
-        Number(price || 0)
-            .toLocaleString("fa-IR")
-        + " تومان"
-    );
-
-}
-
-
+```javascript
 // ========================================
 // نمایش سبد خرید
 // ========================================
@@ -285,23 +53,18 @@ function renderCart() {
         `;
 
         if (totalElement) {
-
             totalElement.textContent =
                 formatPrice(0);
-
         }
 
         if (finalTotalElement) {
-
             finalTotalElement.textContent =
                 formatPrice(0);
-
         }
 
         updateCheckoutState();
 
         return;
-
     }
 
 
@@ -311,19 +74,27 @@ function renderCart() {
 
     container.innerHTML = cart.map(item => {
 
+        const quantity =
+            Math.max(
+                1,
+                Number(item.quantity || 1)
+            );
+
+        const price =
+            Number(item.price || 0);
+
         const itemTotal =
-            Number(item.price || 0) *
-            Number(item.quantity || 0);
+            price * quantity;
 
         const title =
             item.title || "بدون عنوان";
 
         const author =
-            item.author ||
-            "نویسنده نامشخص";
+            item.author || "نویسنده نامشخص";
 
         const publisher =
             item.publisher ||
+            item.nashir ||
             "ناشر ثبت نشده";
 
 
@@ -331,6 +102,7 @@ function renderCart() {
 
             <article class="cart-product">
 
+                <!-- حذف -->
                 <button
                     type="button"
                     class="remove-cart"
@@ -341,6 +113,7 @@ function renderCart() {
                 </button>
 
 
+                <!-- جلد کتاب -->
                 <div class="cart-product-cover">
 
                     <div class="cover-inner">
@@ -349,15 +122,12 @@ function renderCart() {
                             ${title}
                         </strong>
 
-                        <small>
-                            ${author}
-                        </small>
-
                     </div>
 
                 </div>
 
 
+                <!-- اطلاعات کتاب -->
                 <div class="cart-product-details">
 
                     <span class="cart-product-label">
@@ -384,6 +154,7 @@ function renderCart() {
                     </div>
 
 
+                    <!-- تعداد و قیمت -->
                     <div class="cart-product-bottom">
 
                         <div class="cart-quantity">
@@ -397,7 +168,7 @@ function renderCart() {
                             </button>
 
                             <span>
-                                ${Number(item.quantity).toLocaleString("fa-IR")}
+                                ${quantity.toLocaleString("fa-IR")}
                             </span>
 
                             <button
@@ -414,7 +185,7 @@ function renderCart() {
                         <div class="cart-unit-price">
 
                             <strong>
-                                ${formatPrice(item.price)}
+                                ${formatPrice(price)}
                             </strong>
 
                             <small>
@@ -428,6 +199,7 @@ function renderCart() {
                 </div>
 
 
+                <!-- مبلغ کل این کتاب -->
                 <div class="cart-product-total">
 
                     <span>
@@ -448,7 +220,7 @@ function renderCart() {
 
 
     // ========================================
-    // جمع کل
+    // محاسبه جمع کل
     // ========================================
 
     const total =
@@ -474,61 +246,4 @@ function renderCart() {
     updateCheckoutState();
 
 }
-
-
-// ========================================
-// وضعیت دکمه پرداخت
-// ========================================
-
-function updateCheckoutState() {
-
-    const button =
-        document.getElementById(
-            "checkout-button"
-        );
-
-    if (!button) {
-        return;
-    }
-
-    if (cart.length === 0) {
-
-        button.classList.add(
-            "disabled-checkout"
-        );
-
-        button.style.pointerEvents =
-            "none";
-
-    } else {
-
-        button.classList.remove(
-            "disabled-checkout"
-        );
-
-        button.style.pointerEvents =
-            "auto";
-
-    }
-
-}
-
-
-// ========================================
-// اجرای اولیه
-// ========================================
-updateCartCount();
-
-renderCart();
-
-
-// ========================================
-// دسترسی دکمه‌های HTML به توابع سبد خرید
-// ========================================
-
-window.addToCart = addToCart;
-window.removeFromCart = removeFromCart;
-window.changeQuantity = changeQuantity;
-window.updateCartCount = updateCartCount;
-window.calculateCartTotal = calculateCartTotal;
-window.formatPrice = formatPrice;
+```
