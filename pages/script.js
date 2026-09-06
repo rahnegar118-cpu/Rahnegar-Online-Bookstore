@@ -3,6 +3,7 @@
 // Main JavaScript
 // ========================================
 
+
 // ========================================
 // سبد خرید
 // ========================================
@@ -10,6 +11,7 @@
 let cart = [];
 
 try {
+
     const savedCart = localStorage.getItem("rahnegarCart");
 
     if (savedCart) {
@@ -22,26 +24,7 @@ try {
 
 } catch (error) {
 
-    console.log("سبد قبلی خراب بود و پاک شد.");
-
-    cart = [];
-
-    localStorage.removeItem("rahnegarCart");
-}
-try {
-    const savedCart = localStorage.getItem("rahnegarCart");
-
-    if (savedCart) {
-        cart = JSON.parse(savedCart);
-    }
-
-    if (!Array.isArray(cart)) {
-        cart = [];
-    }
-
-} catch (error) {
-
-    console.log("سبد قبلی خراب بود و پاک شد.");
+    console.log("خطا در خواندن سبد خرید.");
 
     cart = [];
 
@@ -50,7 +33,7 @@ try {
 
 
 // ========================================
-// ذخیره سبد
+// ذخیره سبد خرید
 // ========================================
 
 function saveCart() {
@@ -64,7 +47,7 @@ function saveCart() {
 
 
 // ========================================
-// تعداد کالاهای سبد
+// به‌روزرسانی تعداد کالاهای سبد
 // ========================================
 
 function updateCartCount() {
@@ -72,10 +55,14 @@ function updateCartCount() {
     const cartCount =
         document.getElementById("cart-count");
 
-    if (!cartCount) return;
+    if (!cartCount) {
+        return;
+    }
 
     const count = cart.reduce(
-        (total, item) => total + (item.quantity || 0),
+        (total, item) => {
+            return total + Number(item.quantity || 0);
+        },
         0
     );
 
@@ -91,24 +78,31 @@ function updateCartCount() {
 
 function addToCart(book) {
 
-    console.log("افزودن به سبد:", book);
+    console.log("کتاب در حال اضافه شدن:", book);
 
     const existingBook = cart.find(
-        item => item.id === book.id
+        item => Number(item.id) === Number(book.id)
     );
 
     if (existingBook) {
 
-        existingBook.quantity += 1;
+        existingBook.quantity =
+            Number(existingBook.quantity || 0) + 1;
 
     } else {
 
         cart.push({
-            id: book.id,
+
+            id: Number(book.id),
+
             title: book.title,
+
             author: book.author || "",
-            price: Number(book.price),
+
+            price: Number(book.price) || 0,
+
             quantity: 1
+
         });
 
     }
@@ -117,19 +111,23 @@ function addToCart(book) {
 
     updateCartCount();
 
-    alert("کتاب «" + book.title + "» به سبد خرید اضافه شد.");
+    alert(
+        "کتاب «" +
+        book.title +
+        "» به سبد خرید اضافه شد."
+    );
 
 }
 
 
 // ========================================
-// حذف کتاب
+// حذف کتاب از سبد
 // ========================================
 
 function removeFromCart(bookId) {
 
     cart = cart.filter(
-        item => item.id !== bookId
+        item => Number(item.id) !== Number(bookId)
     );
 
     saveCart();
@@ -142,23 +140,26 @@ function removeFromCart(bookId) {
 
 
 // ========================================
-// تغییر تعداد
+// تغییر تعداد کتاب
 // ========================================
 
 function changeQuantity(bookId, change) {
 
     const book = cart.find(
-        item => item.id === bookId
+        item => Number(item.id) === Number(bookId)
     );
 
-    if (!book) return;
+    if (!book) {
+        return;
+    }
 
-    book.quantity += change;
+    book.quantity =
+        Number(book.quantity || 0) + Number(change);
 
     if (book.quantity <= 0) {
 
         cart = cart.filter(
-            item => item.id !== bookId
+            item => Number(item.id) !== Number(bookId)
         );
 
     }
@@ -183,12 +184,14 @@ function calculateCartTotal() {
         (total, item) => {
 
             return total +
-                (Number(item.price) * Number(item.quantity));
+                (
+                    Number(item.price || 0) *
+                    Number(item.quantity || 0)
+                );
 
         },
 
         0
-
     );
 
 }
@@ -200,9 +203,11 @@ function calculateCartTotal() {
 
 function formatPrice(price) {
 
-    return Number(price)
-        .toLocaleString("fa-IR")
-        + " تومان";
+    return (
+        Number(price || 0)
+            .toLocaleString("fa-IR")
+        + " تومان"
+    );
 
 }
 
@@ -219,10 +224,14 @@ function renderCart() {
     const totalElement =
         document.getElementById("cart-total");
 
-    if (!cartContainer) return;
+    if (!cartContainer) {
+        return;
+    }
 
 
-    // سبد خالی
+    // ========================================
+    // اگر سبد خالی باشد
+    // ========================================
 
     if (cart.length === 0) {
 
@@ -260,7 +269,9 @@ function renderCart() {
     }
 
 
-    // نمایش کتاب‌ها
+    // ========================================
+    // نمایش کتاب‌های سبد
+    // ========================================
 
     cartContainer.innerHTML = cart.map(item => `
 
@@ -286,6 +297,7 @@ function renderCart() {
             <div class="cart-quantity">
 
                 <button
+                    type="button"
                     onclick="changeQuantity(${item.id}, 1)"
                 >
                     +
@@ -296,6 +308,7 @@ function renderCart() {
                 </span>
 
                 <button
+                    type="button"
                     onclick="changeQuantity(${item.id}, -1)"
                 >
                     −
@@ -305,6 +318,7 @@ function renderCart() {
 
 
             <button
+                type="button"
                 class="remove-cart"
                 onclick="removeFromCart(${item.id})"
             >
@@ -315,6 +329,10 @@ function renderCart() {
 
     `).join("");
 
+
+    // ========================================
+    // نمایش مبلغ کل
+    // ========================================
 
     if (totalElement) {
 
