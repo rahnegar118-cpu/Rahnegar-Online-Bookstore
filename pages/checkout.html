@@ -1609,25 +1609,16 @@ document
 /* =========================================================
    اعتبارسنجی
 ========================================================= */
-
 function submitOrder() {
 
-    if (
-        !Array.isArray(cart) ||
-        cart.length === 0
-    ) {
+    if (!Array.isArray(cart) || cart.length === 0) {
 
-        alert(
-            "سبد خرید شما خالی است."
-        );
-
+        alert("سبد خرید شما خالی است.");
         return;
 
     }
 
-
     const requiredFields = [
-
         "first-name",
         "last-name",
         "phone",
@@ -1636,68 +1627,139 @@ function submitOrder() {
         "city",
         "address",
         "postal-code"
-
     ];
 
+    for (const id of requiredFields) {
 
-    for (
-        const id of requiredFields
-    ) {
+        const element = document.getElementById(id);
 
-        const element =
-            document.getElementById(id);
+        if (!element || !element.value.trim()) {
 
-
-        if (
-            !element ||
-            !element.value.trim()
-        ) {
-
-            alert(
-                "لطفاً تمام اطلاعات ضروری سفارش را کامل کنید."
-            );
-
+            alert("لطفاً تمام اطلاعات ضروری سفارش را کامل کنید.");
 
             element?.focus();
 
-
             return;
+        }
+    }
+
+    const result = calculateCheckout();
+
+    const customer = {
+        firstName: document.getElementById("first-name").value.trim(),
+        lastName: document.getElementById("last-name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        email: document.getElementById("email").value.trim()
+    };
+
+    const address = {
+        province: document.getElementById("province").value,
+        county: document.getElementById("county").value,
+        city: document.getElementById("city").value.trim(),
+        address: document.getElementById("address").value.trim(),
+        postalCode: document.getElementById("postal-code").value.trim(),
+        receiver: document.getElementById("receiver").value.trim(),
+        note: document.getElementById("order-note").value.trim()
+    };
+
+    const orderData = {
+
+        customer: customer,
+
+        address: address,
+
+        items: cart.map(item => ({
+            title: item.title || "کتاب",
+            price: Number(item.price) || 0,
+            quantity: Math.max(
+                1,
+                parseInt(item.quantity, 10) || 1
+            )
+        })),
+
+        shipping: result.shipping,
+
+        total: result.total,
+
+        paymentGateway: "zarinpal"
+    };
+
+
+    const button =
+        document.getElementById("pay-button");
+
+    button.disabled = true;
+
+    button.querySelector("span").textContent =
+        "در حال ایجاد سفارش...";
+
+
+    fetch("http://localhost:3000/api/orders", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(orderData)
+
+    })
+
+    .then(response => {
+
+        if (!response.ok) {
+            throw new Error("خطا در ارتباط با سرور");
+        }
+
+        return response.json();
+
+    })
+
+    .then(data => {
+
+        console.log("پاسخ سرور:", data);
+
+        if (!data.success) {
+
+            throw new Error(
+                data.message || "ثبت سفارش ناموفق بود."
+            );
 
         }
 
-    }
+        alert(
+            "سفارش با موفقیت ایجاد شد.\n\n" +
+            "شماره سفارش: " +
+            data.order.id +
+            "\n\n" +
+            "مبلغ: " +
+            checkoutPrice(data.order.amount)
+        );
 
+    })
 
-    const result =
-        calculateCheckout();
+    .catch(error => {
 
+        console.error(error);
 
-    alert(
+        alert(
+            "ارتباط با سرور برقرار نشد.\n\n" +
+            "لطفاً مطمئن شوید سرور رهنگر در حال اجراست."
+        );
 
-        "سفارش شما آماده پرداخت است.\n\n" +
+    })
 
-        "تعداد کتاب‌ها: " +
-        toPersianNumber(result.quantity) +
+    .finally(() => {
 
-        "\nمبلغ کالاها: " +
-        checkoutPrice(result.subtotal) +
+        button.disabled = false;
 
-        "\nهزینه ارسال: " +
-        (
-            result.shipping === 0
-                ? "رایگان"
-                : checkoutPrice(result.shipping)
-        ) +
+        button.querySelector("span").textContent =
+            "ثبت سفارش و ادامه پرداخت";
 
-        "\nمبلغ نهایی: " +
-        checkoutPrice(result.total) +
-
-        "\n\nمرحله بعد اتصال درگاه پرداخت است."
-
-    );
+    });
 
 }
-
 
 /* =========================================================
    اجرا
