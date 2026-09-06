@@ -5396,3 +5396,46 @@ img {
         height: 88px !important;
     }
 }
+/* ================================
+   FIX MOBILE HORIZONTAL OVERFLOW
+================================ */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section,
+    main,
+    header,
+    footer {
+        max-width: 100%;
+    }
+}
