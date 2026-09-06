@@ -2,12 +2,32 @@
 // Rahnegar Bookstore
 // Main JavaScript
 // ========================================
-let cart = [];  ========================================
+
+// ========================================
 // سبد خرید
 // ========================================
 
 let cart = [];
 
+try {
+    const savedCart = localStorage.getItem("rahnegarCart");
+
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+
+    if (!Array.isArray(cart)) {
+        cart = [];
+    }
+
+} catch (error) {
+
+    console.log("سبد قبلی خراب بود و پاک شد.");
+
+    cart = [];
+
+    localStorage.removeItem("rahnegarCart");
+}
 try {
     const savedCart = localStorage.getItem("rahnegarCart");
 
