@@ -1,1 +1,693 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسویه حساب | رهنگر</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="logo">
+            رهنگر
+            <span>کتاب‌فروشی آنلاین</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../index.html">خانه</a>
+            <a href="books.html">فروشگاه</a>
+            <a href="cart.html">سبد خرید</a>
+            <a href="account.html">حساب کاربری</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="page-header">
+
+        <h1>تسویه حساب</h1>
+
+        <p>
+            اطلاعات ارسال سفارش خود را وارد کنید
+        </p>
+
+    </section>
+
+
+    <section class="checkout-layout">
+
+
+        <!-- اطلاعات مشتری -->
+
+        <div class="checkout-form">
+
+            <div class="checkout-box">
+
+                <h2>اطلاعات مشتری</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            نام و نام خانوادگی
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="نام و نام خانوادگی"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            شماره موبایل
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="۰۹۱۲۱۲۳۴۵۶۷"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        ایمیل
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="example@email.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- آدرس -->
+
+            <div class="checkout-box">
+
+                <h2>آدرس ارسال</h2>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            استان
+                        </label>
+
+                        <select>
+
+                            <option>
+                                انتخاب استان
+                            </option>
+
+                            <option>
+                                تهران
+                            </option>
+
+                            <option>
+                                قم
+                            </option>
+
+                            <option>
+                                اصفهان
+                            </option>
+
+                            <option>
+                                خراسان رضوی
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            شهر
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="نام شهر"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        نشانی کامل
+                    </label>
+
+                    <textarea
+                        rows="4"
+                        placeholder="نشانی دقیق محل دریافت سفارش"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        کد پستی
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="کد پستی ده رقمی"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- روش ارسال -->
+
+            <div class="checkout-box">
+
+                <h2>روش ارسال</h2>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        checked
+                    >
+
+                    <div>
+
+                        <strong>
+                            ارسال عادی
+                        </strong>
+
+                        <p>
+                            تحویل طی ۳ تا ۵ روز کاری
+                        </p>
+
+                    </div>
+
+                    <span>
+                        ۵۰٬۰۰۰ تومان
+                    </span>
+
+                </label>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                    >
+
+                    <div>
+
+                        <strong>
+                            ارسال سریع
+                        </strong>
+
+                        <p>
+                            تحویل طی ۱ تا ۲ روز کاری
+                        </p>
+
+                    </div>
+
+                    <span>
+                        ۹۰٬۰۰۰ تومان
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- روش پرداخت -->
+
+            <div class="checkout-box">
+
+                <h2>روش پرداخت</h2>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        checked
+                    >
+
+                    <div>
+
+                        <strong>
+                            پرداخت آنلاین
+                        </strong>
+
+                        <p>
+                            پرداخت امن از طریق درگاه بانکی
+                        </p>
+
+                    </div>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                    >
+
+                    <div>
+
+                        <strong>
+                            پرداخت هنگام تحویل
+                        </strong>
+
+                        <p>
+                            در صورت فعال بودن برای محدوده شما
+                        </p>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- خلاصه سفارش -->
+
+        <aside class="checkout-summary">
+
+            <div class="checkout-box">
+
+                <h2>
+                    خلاصه سفارش
+                </h2>
+
+
+                <div class="order-product">
+
+                    <div class="product-mini-cover">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            شرح منظومه
+                        </strong>
+
+                        <p>
+                            تعداد: ۱
+                        </p>
+
+                    </div>
+
+                    <span>
+                        ۴۵۰٬۰۰۰
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        جمع کالاها
+                    </span>
+
+                    <strong>
+                        ۴۵۰٬۰۰۰ تومان
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        تخفیف
+                    </span>
+
+                    <strong>
+                        ۵۰٬۰۰۰ تومان
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        ارسال
+                    </span>
+
+                    <strong>
+                        ۵۰٬۰۰۰ تومان
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        مبلغ قابل پرداخت
+                    </span>
+
+                    <strong>
+                        ۴۵۰٬۰۰۰ تومان
+                    </strong>
+
+                </div>
+
+
+                <button class="btn-primary checkout-button">
+                    پرداخت و ثبت سفارش
+                </button>
+
+
+                <a
+                    href="cart.html"
+                    class="back-to-cart"
+                >
+                    ← بازگشت به سبد خرید
+                </a>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <h3>
+            رهنگر
+        </h3>
+
+        <p>
+            کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
+        </p>
+
+        <div class="footer-bottom">
+            © تمامی حقوق برای رهنگر محفوظ است.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 30px;
+    margin-bottom: 70px;
+    align-items: start;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.checkout-box {
+    background: #fff;
+    border: 1px solid #eadfce;
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.checkout-box h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #4b2e20;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4b2e20;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border: 1px solid #ded2c2;
+    border-radius: 10px;
+    background: #fffdf9;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #8b6b4e;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.shipping-option,
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #e6dacb;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.shipping-option:last-child,
+.payment-option:last-child {
+    margin-bottom: 0;
+}
+
+.shipping-option input,
+.payment-option input {
+    accent-color: #4b2e20;
+}
+
+.shipping-option div,
+.payment-option div {
+    flex: 1;
+}
+
+.shipping-option strong,
+.payment-option strong {
+    display: block;
+    color: #4b2e20;
+    margin-bottom: 5px;
+}
+
+.shipping-option p,
+.payment-option p {
+    margin: 0;
+    color: #8b8178;
+    font-size: 13px;
+}
+
+.shipping-option span {
+    white-space: nowrap;
+    font-weight: 600;
+    color: #4b2e20;
+}
+
+.checkout-summary {
+    position: sticky;
+    top: 20px;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee4d7;
+}
+
+.product-mini-cover {
+    width: 55px;
+    height: 70px;
+    border-radius: 8px;
+    background: #f1e8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.order-product div:nth-child(2) {
+    flex: 1;
+}
+
+.order-product strong {
+    color: #4b2e20;
+}
+
+.order-product p {
+    margin: 5px 0 0;
+    color: #8b8178;
+    font-size: 13px;
+}
+
+.order-product > span {
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 16px;
+    color: #766b62;
+}
+
+.summary-row strong {
+    color: #4b2e20;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.summary-total strong {
+    font-size: 19px;
+    color: #4b2e20;
+}
+
+.checkout-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.back-to-cart {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #6d5542;
+    text-decoration: none;
+}
+
+.back-to-cart:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .checkout-box {
+        padding: 20px;
+    }
+
+    .shipping-option {
+        align-items: flex-start;
+    }
+
+    .shipping-option span {
+        font-size: 13px;
+    }
+
+}
+
+</style>
+
+</body>
+</html>
