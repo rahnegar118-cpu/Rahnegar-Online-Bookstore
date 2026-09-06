@@ -18,52 +18,26 @@
 
         <a href="../index.html" class="logo">
 
-            <div class="logo-mark">
-                ر
-            </div>
+            <div class="logo-mark">ر</div>
 
             <div class="logo-text">
-
-                <strong>
-                    رهنگر
-                </strong>
-
-                <small>
-                    کتاب‌فروشی آنلاین
-                </small>
-
+                <strong>رهنگر</strong>
+                <small>کتاب‌فروشی آنلاین</small>
             </div>
 
         </a>
 
-
         <nav class="nav">
-
-            <a href="../index.html">
-                خانه
-            </a>
-
-            <a href="books.html">
-                فروشگاه
-            </a>
-
-            <a href="account.html">
-                حساب کاربری
-            </a>
-
+            <a href="../index.html">خانه</a>
+            <a href="books.html">فروشگاه</a>
+            <a href="account.html">حساب کاربری</a>
         </nav>
-
 
         <div class="header-actions">
 
             <a href="cart.html" class="cart-btn">
-
                 سبد خرید
-
-                <span id="cart-count">
-                    ۰
-                </span>
-
+                <span id="cart-count">۰</span>
             </a>
 
         </div>
@@ -75,21 +49,13 @@
 
 <main>
 
-    <!-- =========================
-         عنوان صفحه
-    ========================== -->
-
     <section class="checkout-hero">
 
         <div class="container">
 
-            <span>
-                RAHNEGAR BOOKSTORE
-            </span>
+            <span>RAHNEGAR BOOKSTORE</span>
 
-            <h1>
-                تکمیل سفارش
-            </h1>
+            <h1>تکمیل سفارش</h1>
 
             <p>
                 چند قدم تا رسیدن کتاب‌ها به دست شما باقی مانده است.
@@ -103,30 +69,20 @@
     <section class="container checkout-page">
 
 
-        <!-- =========================
-             اطلاعات خریدار
-        ========================== -->
-
         <div class="checkout-main">
+
+
+            <!-- اطلاعات خریدار -->
 
             <div class="checkout-section">
 
                 <div class="checkout-section-heading">
 
-                    <div class="checkout-number">
-                        ۱
-                    </div>
+                    <div class="checkout-number">۱</div>
 
                     <div>
-
-                        <span>
-                            اطلاعات سفارش
-                        </span>
-
-                        <h2>
-                            اطلاعات خریدار
-                        </h2>
-
+                        <span>اطلاعات سفارش</span>
+                        <h2>اطلاعات خریدار</h2>
                     </div>
 
                 </div>
@@ -143,7 +99,7 @@
                         <input
                             type="text"
                             id="first-name"
-                            placeholder="نام خود را وارد کنید"
+                            placeholder="نام"
                         >
 
                     </div>
@@ -183,9 +139,7 @@
 
                         <label for="email">
                             ایمیل
-                            <small>
-                                اختیاری
-                            </small>
+                            <small>اختیاری</small>
                         </label>
 
                         <input
@@ -201,28 +155,17 @@
             </div>
 
 
-            <!-- =========================
-                 آدرس
-            ========================== -->
+            <!-- آدرس -->
 
             <div class="checkout-section">
 
                 <div class="checkout-section-heading">
 
-                    <div class="checkout-number">
-                        ۲
-                    </div>
+                    <div class="checkout-number">۲</div>
 
                     <div>
-
-                        <span>
-                            محل تحویل
-                        </span>
-
-                        <h2>
-                            آدرس ارسال
-                        </h2>
-
+                        <span>محل تحویل</span>
+                        <h2>آدرس ارسال</h2>
                     </div>
 
                 </div>
@@ -230,7 +173,8 @@
 
                 <div class="checkout-form">
 
-                    <div class="form-group full">
+
+                    <div class="form-group">
 
                         <label for="province">
                             استان
@@ -242,32 +186,21 @@
                                 انتخاب استان
                             </option>
 
-                            <option>
-                                تهران
-                            </option>
+                        </select>
 
-                            <option>
-                                قم
-                            </option>
+                    </div>
 
-                            <option>
-                                اصفهان
-                            </option>
 
-                            <option>
-                                فارس
-                            </option>
+                    <div class="form-group">
 
-                            <option>
-                                خراسان رضوی
-                            </option>
+                        <label for="county">
+                            شهرستان
+                        </label>
 
-                            <option>
-                                آذربایجان شرقی
-                            </option>
+                        <select id="county" disabled>
 
-                            <option>
-                                آذربایجان غربی
+                            <option value="">
+                                ابتدا استان را انتخاب کنید
                             </option>
 
                         </select>
@@ -315,6 +248,7 @@
                             type="text"
                             id="postal-code"
                             maxlength="10"
+                            inputmode="numeric"
                             placeholder="۱۰ رقم"
                         >
 
@@ -330,7 +264,7 @@
                         <input
                             type="text"
                             id="receiver"
-                            placeholder="در صورت تفاوت با خریدار"
+                            placeholder="نام تحویل‌گیرنده"
                         >
 
                     </div>
@@ -340,28 +274,17 @@
             </div>
 
 
-            <!-- =========================
-                 روش ارسال
-            ========================== -->
+            <!-- ارسال -->
 
             <div class="checkout-section">
 
                 <div class="checkout-section-heading">
 
-                    <div class="checkout-number">
-                        ۳
-                    </div>
+                    <div class="checkout-number">۳</div>
 
                     <div>
-
-                        <span>
-                            روش دریافت
-                        </span>
-
-                        <h2>
-                            روش ارسال
-                        </h2>
-
+                        <span>روش دریافت</span>
+                        <h2>روش ارسال</h2>
                     </div>
 
                 </div>
@@ -432,28 +355,17 @@
             </div>
 
 
-            <!-- =========================
-                 یادداشت
-            ========================== -->
+            <!-- توضیحات -->
 
             <div class="checkout-section">
 
                 <div class="checkout-section-heading">
 
-                    <div class="checkout-number">
-                        ۴
-                    </div>
+                    <div class="checkout-number">۴</div>
 
                     <div>
-
-                        <span>
-                            توضیحات
-                        </span>
-
-                        <h2>
-                            یادداشت سفارش
-                        </h2>
-
+                        <span>توضیحات</span>
+                        <h2>یادداشت سفارش</h2>
                     </div>
 
                 </div>
@@ -482,9 +394,7 @@
 
             <div class="summary-top">
 
-                <span>
-                    RAHNEGAR
-                </span>
+                <span>RAHNEGAR</span>
 
                 <h2>
                     خلاصه سفارش
@@ -493,10 +403,8 @@
             </div>
 
 
-            <div
-                id="checkout-items"
-                class="checkout-items"
-            >
+            <div id="checkout-items"
+                 class="checkout-items">
             </div>
 
 
@@ -506,10 +414,36 @@
             <div class="checkout-summary-row">
 
                 <span>
+                    تعداد کل کتاب‌ها
+                </span>
+
+                <strong id="checkout-quantity">
+                    ۰
+                </strong>
+
+            </div>
+
+
+            <div class="checkout-summary-row">
+
+                <span>
                     جمع کالاها
                 </span>
 
                 <strong id="checkout-subtotal">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    تخفیف
+                </span>
+
+                <strong>
                     ۰ تومان
                 </strong>
 
@@ -554,17 +488,13 @@
 
                 ثبت سفارش و ادامه پرداخت
 
-                <span>
-                    ←
-                </span>
+                <span>←</span>
 
             </button>
 
 
             <p class="payment-note">
-
                 پرداخت امن از طریق درگاه بانکی
-
             </p>
 
 
@@ -587,9 +517,7 @@
     <div class="container">
 
         <div class="footer-bottom">
-
             © تمامی حقوق برای رهنگر محفوظ است.
-
         </div>
 
     </div>
@@ -602,23 +530,222 @@
 
 <script>
 
-/* ========================================
-   نمایش محصولات در تسویه حساب
-======================================== */
+/* =====================================================
+   تقسیمات کشوری ایران
+   منبع داده: Open Admin Data
+===================================================== */
+
+const locationDataUrl =
+    "https://openadmindata.org/api/ir/hierarchy.json";
+
+
+/* =====================================================
+   عناصر
+===================================================== */
+
+const provinceSelect =
+    document.getElementById("province");
+
+const countySelect =
+    document.getElementById("county");
+
+
+/* =====================================================
+   تبدیل اعداد انگلیسی به فارسی
+===================================================== */
+
+function persianNumber(number) {
+
+    return String(number).replace(
+        /\d/g,
+        digit => "۰۱۲۳۴۵۶۷۸۹"[digit]
+    );
+
+}
+
+
+/* =====================================================
+   بارگذاری استان‌ها و شهرستان‌ها
+===================================================== */
+
+async function loadIranLocations() {
+
+    try {
+
+        const response =
+            await fetch(locationDataUrl);
+
+        if (!response.ok) {
+            throw new Error("خطا در دریافت تقسیمات");
+        }
+
+        const data =
+            await response.json();
+
+
+        /*
+         ساختار دیتاست:
+
+         استان
+           ↓
+         شهرستان
+        */
+
+        const provinces =
+            Array.isArray(data)
+                ? data
+                : data.provinces || data.data || [];
+
+
+        provinceSelect.innerHTML = `
+            <option value="">
+                انتخاب استان
+            </option>
+        `;
+
+
+        provinces.forEach(province => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                province.id ||
+                province.name?.local ||
+                province.name;
+
+            option.textContent =
+                province.name?.local ||
+                province.name;
+
+            option.dataset.children =
+                JSON.stringify(
+                    province.children ||
+                    province.counties ||
+                    []
+                );
+
+            provinceSelect.appendChild(option);
+
+        });
+
+
+        provinceSelect.disabled = false;
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        provinceSelect.innerHTML = `
+            <option value="">
+                خطا در دریافت استان‌ها
+            </option>
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   تغییر استان
+===================================================== */
+
+provinceSelect.addEventListener(
+    "change",
+    function () {
+
+        const selected =
+            this.options[this.selectedIndex];
+
+
+        countySelect.innerHTML = `
+            <option value="">
+                انتخاب شهرستان
+            </option>
+        `;
+
+
+        countySelect.disabled = true;
+
+
+        if (!selected.value) {
+            return;
+        }
+
+
+        try {
+
+            const counties =
+                JSON.parse(
+                    selected.dataset.children || "[]"
+                );
+
+
+            counties.forEach(county => {
+
+                const option =
+                    document.createElement("option");
+
+                option.value =
+                    county.id ||
+                    county.name?.local ||
+                    county.name;
+
+                option.textContent =
+                    county.name?.local ||
+                    county.name;
+
+                countySelect.appendChild(option);
+
+            });
+
+
+            countySelect.disabled =
+                counties.length === 0;
+
+
+        } catch (error) {
+
+            console.error(error);
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   خلاصه سفارش
+===================================================== */
 
 function renderCheckout() {
 
     const itemsContainer =
-        document.getElementById("checkout-items");
+        document.getElementById(
+            "checkout-items"
+        );
 
-    const subtotal =
-        document.getElementById("checkout-subtotal");
+    const quantityElement =
+        document.getElementById(
+            "checkout-quantity"
+        );
 
-    const total =
-        document.getElementById("checkout-total");
+    const subtotalElement =
+        document.getElementById(
+            "checkout-subtotal"
+        );
 
-    const shipping =
-        document.getElementById("shipping-price");
+    const totalElement =
+        document.getElementById(
+            "checkout-total"
+        );
+
+    const shippingElement =
+        document.getElementById(
+            "shipping-price"
+        );
 
 
     if (!itemsContainer) {
@@ -626,7 +753,14 @@ function renderCheckout() {
     }
 
 
-    if (!Array.isArray(cart) || cart.length === 0) {
+    /* ---------------------------------------------
+       بررسی سبد
+    --------------------------------------------- */
+
+    if (
+        !Array.isArray(cart) ||
+        cart.length === 0
+    ) {
 
         itemsContainer.innerHTML = `
 
@@ -638,57 +772,128 @@ function renderCheckout() {
 
         `;
 
-        if (subtotal) {
-            subtotal.textContent =
-                formatPrice(0);
-        }
+        quantityElement.textContent =
+            persianNumber(0);
 
-        if (total) {
-            total.textContent =
-                formatPrice(0);
-        }
+        subtotalElement.textContent =
+            formatPrice(0);
+
+        totalElement.textContent =
+            formatPrice(0);
 
         return;
 
     }
 
 
-    itemsContainer.innerHTML =
-        cart.map(item => `
+    /* ---------------------------------------------
+       محاسبه واقعی
+    --------------------------------------------- */
 
-            <div class="checkout-item">
+    let totalQuantity = 0;
 
-                <div class="checkout-item-info">
+    let subtotal = 0;
+
+
+    cart.forEach(item => {
+
+        const quantity =
+            Math.max(
+                1,
+                Number(item.quantity) || 1
+            );
+
+
+        const price =
+            Math.max(
+                0,
+                Number(item.price) || 0
+            );
+
+
+        totalQuantity += quantity;
+
+        subtotal +=
+            price * quantity;
+
+    });
+
+
+    /* ---------------------------------------------
+       نمایش تک تک کتاب‌ها
+    --------------------------------------------- */
+
+    itemsContainer.innerHTML = cart.map(
+        item => {
+
+            const quantity =
+                Math.max(
+                    1,
+                    Number(item.quantity) || 1
+                );
+
+
+            const price =
+                Math.max(
+                    0,
+                    Number(item.price) || 0
+                );
+
+
+            const itemTotal =
+                price * quantity;
+
+
+            return `
+
+                <div class="checkout-item">
+
+                    <div class="checkout-item-info">
+
+                        <strong>
+                            ${item.title}
+                        </strong>
+
+                        <span>
+                            ${formatPrice(price)}
+                            ×
+                            ${persianNumber(quantity)}
+                        </span>
+
+                    </div>
+
 
                     <strong>
-                        ${item.title}
+                        ${formatPrice(itemTotal)}
                     </strong>
-
-                    <span>
-                        تعداد:
-                        ${Number(item.quantity).toLocaleString("fa-IR")}
-                    </span>
 
                 </div>
 
-                <strong>
-                    ${formatPrice(
-                        Number(item.price) *
-                        Number(item.quantity)
-                    )}
-                </strong>
+            `;
 
-            </div>
-
-        `).join("");
+        }
+    ).join("");
 
 
-    const subtotalValue =
-        calculateCartTotal();
+    /* ---------------------------------------------
+       تعداد کل
+    --------------------------------------------- */
+
+    quantityElement.textContent =
+        persianNumber(totalQuantity);
 
 
-    let shippingValue = 0;
+    /* ---------------------------------------------
+       جمع کالاها
+    --------------------------------------------- */
 
+    subtotalElement.textContent =
+        formatPrice(subtotal);
+
+
+    /* ---------------------------------------------
+       هزینه ارسال
+    --------------------------------------------- */
 
     const selectedShipping =
         document.querySelector(
@@ -696,41 +901,47 @@ function renderCheckout() {
         );
 
 
+    let shippingCost = 0;
+
+
     if (
         selectedShipping &&
         selectedShipping.value === "express"
     ) {
 
-        shippingValue = 75000;
+        shippingCost = 75000;
 
     }
 
 
-    subtotal.textContent =
-        formatPrice(subtotalValue);
-
-
-    shipping.textContent =
-        shippingValue === 0
+    shippingElement.textContent =
+        shippingCost === 0
             ? "رایگان"
-            : formatPrice(shippingValue);
+            : formatPrice(shippingCost);
 
 
-    total.textContent =
-        formatPrice(
-            subtotalValue +
-            shippingValue
-        );
+    /* ---------------------------------------------
+       مبلغ نهایی
+    --------------------------------------------- */
+
+    const finalTotal =
+        subtotal + shippingCost;
+
+
+    totalElement.textContent =
+        formatPrice(finalTotal);
 
 }
 
 
-/* ========================================
+/* =====================================================
    تغییر روش ارسال
-======================================== */
+===================================================== */
 
 document
-    .querySelectorAll('input[name="shipping"]')
+    .querySelectorAll(
+        'input[name="shipping"]'
+    )
     .forEach(input => {
 
         input.addEventListener(
@@ -741,13 +952,16 @@ document
     });
 
 
-/* ========================================
-   ثبت سفارش موقت
-======================================== */
+/* =====================================================
+   ثبت سفارش
+===================================================== */
 
 function submitOrder() {
 
-    if (!Array.isArray(cart) || cart.length === 0) {
+    if (
+        !Array.isArray(cart) ||
+        cart.length === 0
+    ) {
 
         alert(
             "سبد خرید شما خالی است."
@@ -758,66 +972,58 @@ function submitOrder() {
     }
 
 
-    const firstName =
-        document.getElementById(
-            "first-name"
-        ).value.trim();
+    const requiredFields = [
+
+        "first-name",
+        "last-name",
+        "phone",
+        "city",
+        "address",
+        "postal-code"
+
+    ];
 
 
-    const lastName =
-        document.getElementById(
-            "last-name"
-        ).value.trim();
-
-
-    const phone =
-        document.getElementById(
-            "phone"
-        ).value.trim();
-
-
-    const address =
-        document.getElementById(
-            "address"
-        ).value.trim();
-
-
-    const city =
-        document.getElementById(
-            "city"
-        ).value.trim();
-
-
-    const postalCode =
-        document.getElementById(
-            "postal-code"
-        ).value.trim();
-
-
-    if (
-        !firstName ||
-        !lastName ||
-        !phone ||
-        !address ||
-        !city ||
-        !postalCode
+    for (
+        const fieldId of requiredFields
     ) {
 
-        alert(
-            "لطفاً اطلاعات ضروری سفارش را کامل کنید."
-        );
+        const field =
+            document.getElementById(fieldId);
 
-        return;
+
+        if (
+            !field ||
+            !field.value.trim()
+        ) {
+
+            alert(
+                "لطفاً اطلاعات ضروری سفارش را کامل کنید."
+            );
+
+            field?.focus();
+
+            return;
+
+        }
 
     }
 
 
     alert(
-        "اطلاعات سفارش با موفقیت دریافت شد.\n\nدر مرحله بعد درگاه پرداخت را متصل می‌کنیم."
+        "اطلاعات سفارش با موفقیت ثبت شد.\n\nمرحله بعد اتصال درگاه پرداخت است."
     );
 
 }
 
+
+/* =====================================================
+   اجرا
+===================================================== */
+
+updateCartCount();
+
+loadIranLocations();
 
 renderCheckout();
 
