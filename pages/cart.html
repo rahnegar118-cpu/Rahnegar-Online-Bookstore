@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سبد خرید | رهنگر</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-mark">
+                ر
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    کتاب‌فروشی آنلاین
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                فروشگاه
+            </a>
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="account.html" class="account-btn">
+                حساب کاربری
+            </a>
+
+            <a href="cart.html" class="cart-btn">
+
+                سبد خرید
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="cart-hero">
+
+        <div class="container">
+
+            <span class="cart-eyebrow">
+                RAHNEGAR BOOKSTORE
+            </span>
+
+            <h1>
+                سبد خرید
+            </h1>
+
+            <p>
+                انتخاب‌های شما آماده‌اند تا راهی کتابخانه‌تان شوند.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="container cart-page">
+
+
+        <div class="cart-main">
+
+            <div class="cart-title-row">
+
+                <div>
+
+                    <span>
+« کتاب های انتخابی شما » 
+         </span>
+
+                                    </div>
+
+                <a href="books.html">
+                    ←  خرید مجدد
+                </a>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cart-items"
+            >
+            </div>
+
+        </div>
+
+
+        <aside class="cart-summary">
+
+            <div class="summary-heading">
+
+                <span>
+                    سفارش شما
+                </span>
+
+                <h2>
+                    خلاصه خرید
+                </h2>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    جمع کالاها
+                </span>
+
+                <strong id="cart-total">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    تخفیف
+                </span>
+
+                <strong>
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    ارسال
+                </span>
+
+                <strong class="free-shipping">
+                    رایگان
+                </strong>
+
+            </div>
+
+
+            <div class="summary-line"></div>
+
+
+            <div class="summary-total">
+
+                <span>
+                    مبلغ نهایی
+                </span>
+
+                <strong id="cart-final-total">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <a
+                href="checkout.html"
+                class="checkout-button"
+                id="checkout-button"
+            >
+                ادامه فرایند خرید
+
+                <span>
+                    ←
+                </span>
+
+            </a>
+
+
+            <div class="secure-payment">
+
+                <span>
+                    ◈
+                </span>
+
+                پرداخت امن و مطمئن
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            © تمامی حقوق برای رهنگر محفوظ است.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+function updateFinalTotal() {
+
+    const finalTotal =
+        document.getElementById("cart-final-total");
+
+    if (!finalTotal) {
+        return;
+    }
+
+    if (typeof calculateCartTotal !== "function") {
+        return;
+    }
+
+    finalTotal.textContent =
+        formatPrice(calculateCartTotal());
+
+}
+
+
+function updateCheckoutButton() {
+
+    const button =
+        document.getElementById("checkout-button");
+
+    if (!button) {
+        return;
+    }
+
+    if (!Array.isArray(cart) || cart.length === 0) {
+
+        button.style.opacity = "0.45";
+        button.style.pointerEvents = "none";
+
+    } else {
+
+        button.style.opacity = "1";
+        button.style.pointerEvents = "auto";
+
+    }
+
+}
+
+
+setTimeout(() => {
+
+    updateFinalTotal();
+    updateCheckoutButton();
+
+}, 50);
+
+</script>
+
+</body>
+
+</html>

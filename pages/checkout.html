@@ -1,0 +1,1908 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسویه حساب | رهنگر</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="logo">
+
+            <div class="logo-mark">
+                ر
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    کتاب‌فروشی آنلاین
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                فروشگاه
+            </a>
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="cart.html" class="cart-btn">
+
+                سبد خرید
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="checkout-hero">
+
+        <div class="container">
+
+            <span>
+                RAHNEGAR BOOKSTORE
+            </span>
+
+            <h1>
+                تکمیل سفارش
+            </h1>
+
+            <p>
+                چند قدم تا رسیدن کتاب‌ها به دست شما باقی مانده است.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CHECKOUT
+    ========================================== -->
+
+    <section class="container checkout-page">
+
+
+        <div class="checkout-main">
+
+
+            <!-- =====================================
+                 اطلاعات خریدار
+            ====================================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۱
+                    </div>
+
+                    <div>
+
+                        <span>
+                            اطلاعات سفارش
+                        </span>
+
+                        <h2>
+                            اطلاعات خریدار
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-form">
+
+
+                    <div class="form-group">
+
+                        <label for="first-name">
+                            نام
+                        </label>
+
+                        <input
+                            type="text"
+                            id="first-name"
+                            placeholder="نام"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="last-name">
+                            نام خانوادگی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="last-name"
+                            placeholder="نام خانوادگی"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            شماره موبایل
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            inputmode="tel"
+                            placeholder="۰۹۱۲۱۲۳۴۵۶۷"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+
+                            ایمیل
+
+                            <small>
+                                اختیاری
+                            </small>
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 آدرس
+            ====================================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۲
+                    </div>
+
+                    <div>
+
+                        <span>
+                            محل تحویل
+                        </span>
+
+                        <h2>
+                            آدرس ارسال
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-form">
+
+
+                    <div class="form-group">
+
+                        <label for="province">
+                            استان
+                        </label>
+
+                        <select id="province">
+
+                            <option value="">
+                                انتخاب استان
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="county">
+                            شهرستان
+                        </label>
+
+                        <select
+                            id="county"
+                            disabled
+                        >
+
+                            <option value="">
+                                ابتدا استان را انتخاب کنید
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="city">
+                            شهر
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="نام شهر"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="address">
+                            نشانی کامل
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="خیابان، کوچه، پلاک، واحد..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="postal-code">
+                            کد پستی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postal-code"
+                            maxlength="10"
+                            inputmode="numeric"
+                            placeholder="۱۰ رقم"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="receiver">
+                            نام تحویل‌گیرنده
+                        </label>
+
+                        <input
+                            type="text"
+                            id="receiver"
+                            placeholder="نام تحویل‌گیرنده"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 روش ارسال
+            ====================================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۳
+                    </div>
+
+                    <div>
+
+                        <span>
+                            روش دریافت
+                        </span>
+
+                        <h2>
+                            روش ارسال
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        value="free"
+                        checked
+                    >
+
+                    <div class="shipping-content">
+
+                        <div>
+
+                            <strong>
+                                ارسال عادی
+                            </strong>
+
+                            <p>
+                                تحویل طی ۳ تا ۵ روز کاری
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            رایگان
+                        </strong>
+
+                    </div>
+
+                </label>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        value="express"
+                    >
+
+                    <div class="shipping-content">
+
+                        <div>
+
+                            <strong>
+                                ارسال سریع
+                            </strong>
+
+                            <p>
+                                تحویل طی ۱ تا ۲ روز کاری
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ۷۵٬۰۰۰ تومان
+                        </strong>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+
+            <!-- =====================================
+                 یادداشت
+            ====================================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۴
+                    </div>
+
+                    <div>
+
+                        <span>
+                            توضیحات
+                        </span>
+
+                        <h2>
+                            یادداشت سفارش
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <textarea
+                        id="order-note"
+                        rows="4"
+                        placeholder="اگر درباره سفارش توضیحی دارید اینجا بنویسید..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             خلاصه سفارش
+        ========================================== -->
+
+        <aside class="checkout-summary">
+
+
+            <div class="summary-top">
+
+                <span>
+                    RAHNEGAR
+                </span>
+
+                <h2>
+                    خلاصه سفارش
+                </h2>
+
+            </div>
+
+
+            <!-- محصولات -->
+
+            <div
+                id="checkout-items"
+                class="checkout-items"
+            ></div>
+
+
+            <div class="checkout-summary-line"></div>
+
+
+            <!-- تعداد کل -->
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    تعداد کل کتاب‌ها
+                </span>
+
+                <strong id="checkout-quantity">
+                    ۰
+                </strong>
+
+            </div>
+
+
+            <!-- جمع کالا -->
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    جمع کالاها
+                </span>
+
+                <strong id="checkout-subtotal">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <!-- تخفیف -->
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    تخفیف
+                </span>
+
+                <strong id="checkout-discount">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <!-- ارسال -->
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    هزینه ارسال
+                </span>
+
+                <strong id="shipping-price">
+                    رایگان
+                </strong>
+
+            </div>
+
+
+            <div class="checkout-summary-line"></div>
+
+
+            <!-- مبلغ نهایی -->
+
+            <div class="checkout-total">
+
+                <span>
+                    مبلغ قابل پرداخت
+                </span>
+
+                <strong id="checkout-total">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="pay-button"
+                id="pay-button"
+                onclick="submitOrder()"
+            >
+
+                <span>
+                    ثبت سفارش و ادامه پرداخت
+                </span>
+
+                <span>
+                    ←
+                </span>
+
+            </button>
+
+
+            <p class="payment-note">
+                پرداخت امن از طریق درگاه بانکی
+            </p>
+
+
+            <a
+                href="cart.html"
+                class="back-cart"
+            >
+                ← بازگشت به سبد خرید
+            </a>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            © تمامی حقوق برای رهنگر محفوظ است.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* =========================================================
+   استان‌ها و شهرستان‌های ایران
+========================================================= */
+
+const iranLocations = {
+
+    "آذربایجان شرقی": [
+        "آذرشهر",
+        "اسکو",
+        "اهر",
+        "بستان‌آباد",
+        "بناب",
+        "تبریز",
+        "جلفا",
+        "چاروایماق",
+        "خداآفرین",
+        "سراب",
+        "شبستر",
+        "عجب‌شیر",
+        "کلیبر",
+        "مراغه",
+        "مرند",
+        "ملکان",
+        "میانه",
+        "ورزقان",
+        "هریس",
+        "هشترود"
+    ],
+
+    "آذربایجان غربی": [
+        "ارومیه",
+        "اشنویه",
+        "بوکان",
+        "پیرانشهر",
+        "تکاب",
+        "خوی",
+        "سردشت",
+        "سلماس",
+        "شاهین‌دژ",
+        "شوط",
+        "ماکو",
+        "مهاباد",
+        "میاندوآب",
+        "نقده",
+        "چالدران",
+        "چایپاره",
+        "پلدشت"
+    ],
+
+    "اردبیل": [
+        "اردبیل",
+        "اصلاندوز",
+        "بیله‌سوار",
+        "پارس‌آباد",
+        "خلخال",
+        "گرمی",
+        "مشگین‌شهر",
+        "نمین",
+        "نیر",
+        "کوثر",
+        "سرعین"
+    ],
+
+    "اصفهان": [
+        "آران و بیدگل",
+        "اردستان",
+        "اصفهان",
+        "برخوار",
+        "بوئین و میاندشت",
+        "تیران و کرون",
+        "خمینی‌شهر",
+        "خوانسار",
+        "خور و بیابانک",
+        "دهاقان",
+        "سمیرم",
+        "شاهین‌شهر و میمه",
+        "شهرضا",
+        "فریدن",
+        "فریدون‌شهر",
+        "فلاورجان",
+        "کاشان",
+        "گلپایگان",
+        "مبارکه",
+        "نجف‌آباد",
+        "نائین",
+        "نطنز"
+    ],
+
+    "البرز": [
+        "اشتهارد",
+        "ساوجبلاغ",
+        "طالقان",
+        "فردیس",
+        "کرج",
+        "نظرآباد",
+        "چهارباغ"
+    ],
+
+    "ایلام": [
+        "آبدانان",
+        "ایلام",
+        "ایوان",
+        "بدره",
+        "چرداول",
+        "دره‌شهر",
+        "دهلران",
+        "سیروان",
+        "ملکشاهی",
+        "مهران"
+    ],
+
+    "بوشهر": [
+        "بوشهر",
+        "تنگستان",
+        "جم",
+        "دشتستان",
+        "دشتی",
+        "دیر",
+        "دیلم",
+        "عسلویه",
+        "کنگان",
+        "گناوه"
+    ],
+
+    "تهران": [
+        "تهران",
+        "اسلامشهر",
+        "بهارستان",
+        "پاکدشت",
+        "پردیس",
+        "پیشوا",
+        "دماوند",
+        "رباط‌کریم",
+        "ری",
+        "شمیرانات",
+        "شهریار",
+        "فیروزکوه",
+        "قرچک",
+        "ملارد",
+        "ورامین"
+    ],
+
+    "چهارمحال و بختیاری": [
+        "اردل",
+        "بن",
+        "بروجن",
+        "خانمیرزا",
+        "سامان",
+        "شهرکرد",
+        "فارسان",
+        "کوهرنگ",
+        "کیار",
+        "لردگان"
+    ],
+
+    "خراسان جنوبی": [
+        "بشرویه",
+        "بیرجند",
+        "خوسف",
+        "درمیان",
+        "سرایان",
+        "سربیشه",
+        "فردوس",
+        "قائنات",
+        "نهبندان",
+        "زیرکوه"
+    ],
+
+    "خراسان رضوی": [
+        "باخرز",
+        "بردسکن",
+        "تایباد",
+        "تربت جام",
+        "تربت حیدریه",
+        "جغتای",
+        "جوین",
+        "چناران",
+        "خلیل‌آباد",
+        "خواف",
+        "خوشاب",
+        "داورزن",
+        "درگز",
+        "رشتخوار",
+        "زاوه",
+        "سبزوار",
+        "سرخس",
+        "فریمان",
+        "فیروزه",
+        "قوچان",
+        "کاشمر",
+        "کلات",
+        "گناباد",
+        "مشهد",
+        "مه‌ولات",
+        "نیشابور"
+    ],
+
+    "خراسان شمالی": [
+        "اسفراین",
+        "بجنورد",
+        "جاجرم",
+        "راز و جرگلان",
+        "شیروان",
+        "فاروج",
+        "گرمه",
+        "مانه و سملقان"
+    ],
+
+    "خوزستان": [
+        "آبادان",
+        "آغاجاری",
+        "امیدیه",
+        "اندیکا",
+        "اندیمشک",
+        "اهواز",
+        "ایذه",
+        "باغ‌ملک",
+        "باوی",
+        "بندر ماهشهر",
+        "بهبهان",
+        "حمیدیه",
+        "خرمشهر",
+        "دزفول",
+        "دشت آزادگان",
+        "رامشیر",
+        "رامهرمز",
+        "شادگان",
+        "شوش",
+        "شوشتر",
+        "کارون",
+        "کرخه",
+        "گتوند",
+        "لالی",
+        "مسجدسلیمان",
+        "هفتکل",
+        "هندیجان",
+        "هویزه"
+    ],
+
+    "زنجان": [
+        "ابهر",
+        "ایجرود",
+        "خدابنده",
+        "خرمدره",
+        "زنجان",
+        "سلطانیه",
+        "طارم",
+        "ماهنشان"
+    ],
+
+    "سمنان": [
+        "آرادان",
+        "دامغان",
+        "سرخه",
+        "سمنان",
+        "شاهرود",
+        "گرمسار",
+        "مهدی‌شهر",
+        "میامی"
+    ],
+
+    "سیستان و بلوچستان": [
+        "ایرانشهر",
+        "چابهار",
+        "خاش",
+        "دشتیاری",
+        "راسک",
+        "زابل",
+        "زاهدان",
+        "زهک",
+        "سراوان",
+        "سرباز",
+        "سیب و سوران",
+        "فنوج",
+        "قصرقند",
+        "کنارک",
+        "مهرستان",
+        "میرجاوه",
+        "نیک‌شهر",
+        "هیرمند"
+    ],
+
+    "فارس": [
+        "آباده",
+        "ارسنجان",
+        "استهبان",
+        "اقلید",
+        "بختگان",
+        "بوانات",
+        "پاسارگاد",
+        "جهرم",
+        "خرامه",
+        "خنج",
+        "داراب",
+        "رستم",
+        "زرین‌دشت",
+        "سپیدان",
+        "سروستان",
+        "شیراز",
+        "فراشبند",
+        "فسا",
+        "فیروزآباد",
+        "قیر و کارزین",
+        "کازرون",
+        "لارستان",
+        "لامرد",
+        "مرودشت",
+        "ممسنی",
+        "مهر",
+        "نی‌ریز"
+    ],
+
+    "قزوین": [
+        "آبیک",
+        "آوج",
+        "البرز",
+        "بوئین‌زهرا",
+        "تاکستان",
+        "قزوین"
+    ],
+
+    "قم": [
+        "قم"
+    ],
+
+    "کردستان": [
+        "بانه",
+        "بیجار",
+        "دهگلان",
+        "دیواندره",
+        "سروآباد",
+        "سقز",
+        "سنندج",
+        "قروه",
+        "کامیاران",
+        "مریوان"
+    ],
+
+    "کرمان": [
+        "ارزوئیه",
+        "انار",
+        "بافت",
+        "بردسیر",
+        "بم",
+        "بوانات",
+        "جیرفت",
+        "رابر",
+        "راور",
+        "رفسنجان",
+        "رودبار جنوب",
+        "ریگان",
+        "زرند",
+        "سیرجان",
+        "شهربابک",
+        "عنبرآباد",
+        "فاریاب",
+        "فهرج",
+        "قلعه گنج",
+        "کرمان",
+        "کوهبنان",
+        "کهنوج",
+        "منوجان",
+        "نرماشیر"
+    ],
+
+    "کرمانشاه": [
+        "اسلام‌آباد غرب",
+        "پاوه",
+        "ثلاث باباجانی",
+        "جوانرود",
+        "دالاهو",
+        "روانسر",
+        "سرپل ذهاب",
+        "سنقر",
+        "صحنه",
+        "قصرشیرین",
+        "کرمانشاه",
+        "کنگاور",
+        "گیلانغرب",
+        "هرسین"
+    ],
+
+    "کهگیلویه و بویراحمد": [
+        "باشت",
+        "بویراحمد",
+        "بهمئی",
+        "دنا",
+        "چرام",
+        "کهگیلویه",
+        "گچساران",
+        "لنده"
+    ],
+
+    "گلستان": [
+        "آزادشهر",
+        "آق‌قلا",
+        "بندر گز",
+        "ترکمن",
+        "رامیان",
+        "علی‌آباد",
+        "کردکوی",
+        "کلاله",
+        "گالیکش",
+        "گرگان",
+        "گنبد کاووس",
+        "مراوه‌تپه",
+        "مینودشت"
+    ],
+
+    "گیلان": [
+        "آستارا",
+        "آستانه اشرفیه",
+        "املش",
+        "بندر انزلی",
+        "رشت",
+        "رضوانشهر",
+        "رودبار",
+        "رودسر",
+        "سیاهکل",
+        "شفت",
+        "صومعه‌سرا",
+        "طوالش",
+        "فومن",
+        "لاهیجان",
+        "لنگرود",
+        "ماسال"
+    ],
+
+    "لرستان": [
+        "ازنا",
+        "الیگودرز",
+        "بروجرد",
+        "پلدختر",
+        "خرم‌آباد",
+        "دلفان",
+        "دورود",
+        "رومشکان",
+        "سلسله",
+        "کوهدشت",
+        "چگنی"
+    ],
+
+    "مازندران": [
+        "آمل",
+        "بابل",
+        "بابلسر",
+        "بهشهر",
+        "تنکابن",
+        "جویبار",
+        "چالوس",
+        "رامسر",
+        "ساری",
+        "سوادکوه",
+        "سوادکوه شمالی",
+        "سیمرغ",
+        "عباس‌آباد",
+        "فریدونکنار",
+        "قائم‌شهر",
+        "کلاردشت",
+        "گلوگاه",
+        "محمودآباد",
+        "میاندورود",
+        "نکا",
+        "نور",
+        "نوشهر"
+    ],
+
+    "مرکزی": [
+        "آشتیان",
+        "اراک",
+        "تفرش",
+        "خمین",
+        "خنداب",
+        "دلیجان",
+        "زرندیه",
+        "ساوه",
+        "شازند",
+        "فراهان",
+        "کمیجان",
+        "محلات"
+    ],
+
+    "هرمزگان": [
+        "ابوموسی",
+        "بستک",
+        "بندرعباس",
+        "بندر لنگه",
+        "بشاگرد",
+        "جاسک",
+        "حاجی‌آباد",
+        "خمیر",
+        "رودان",
+        "سیریک",
+        "قشم",
+        "میناب"
+    ],
+
+    "همدان": [
+        "اسدآباد",
+        "بهار",
+        "تویسرکان",
+        "رزن",
+        "فامنین",
+        "کبودرآهنگ",
+        "ملایر",
+        "نهاوند",
+        "همدان"
+    ],
+
+    "یزد": [
+        "ابرکوه",
+        "اردکان",
+        "اشکذر",
+        "بافق",
+        "بهاباد",
+        "تفت",
+        "خاتم",
+        "مهریز",
+        "میبد",
+        "زارچ",
+        "یزد"
+    ]
+
+};
+
+
+/* =========================================================
+   عناصر
+========================================================= */
+
+const provinceSelect =
+    document.getElementById("province");
+
+const countySelect =
+    document.getElementById("county");
+
+
+/* =========================================================
+   استان‌ها
+========================================================= */
+
+function loadProvinces() {
+
+    provinceSelect.innerHTML = `
+        <option value="">
+            انتخاب استان
+        </option>
+    `;
+
+
+    Object.keys(iranLocations)
+        .sort((a, b) => a.localeCompare(b, "fa"))
+        .forEach(province => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                province;
+
+            option.textContent =
+                province;
+
+            provinceSelect.appendChild(option);
+
+        });
+
+}
+
+
+/* =========================================================
+   شهرستان‌ها
+========================================================= */
+
+provinceSelect.addEventListener(
+    "change",
+    function () {
+
+        const province =
+            this.value;
+
+
+        countySelect.innerHTML = `
+            <option value="">
+                انتخاب شهرستان
+            </option>
+        `;
+
+
+        if (!province) {
+
+            countySelect.disabled = true;
+
+            return;
+
+        }
+
+
+        const counties =
+            iranLocations[province] || [];
+
+
+        counties.forEach(county => {
+
+            const option =
+                document.createElement("option");
+
+            option.value =
+                county;
+
+            option.textContent =
+                county;
+
+            countySelect.appendChild(option);
+
+        });
+
+
+        countySelect.disabled =
+            counties.length === 0;
+
+    }
+);
+
+
+/* =========================================================
+   تبدیل عدد به فارسی
+========================================================= */
+
+function toPersianNumber(value) {
+
+    return String(value).replace(
+        /\d/g,
+        digit => "۰۱۲۳۴۵۶۷۸۹"[digit]
+    );
+
+}
+
+
+/* =========================================================
+   فرمت قیمت
+========================================================= */
+
+function checkoutPrice(value) {
+
+    return (
+        Number(value || 0)
+            .toLocaleString("fa-IR")
+        + " تومان"
+    );
+
+}
+
+
+/* =========================================================
+   محاسبه سفارش
+========================================================= */
+
+function calculateCheckout() {
+
+    if (
+        !Array.isArray(cart) ||
+        cart.length === 0
+    ) {
+
+        return {
+            quantity: 0,
+            subtotal: 0,
+            discount: 0,
+            shipping: 0,
+            total: 0
+        };
+
+    }
+
+
+    let quantity = 0;
+
+    let subtotal = 0;
+
+
+    cart.forEach(item => {
+
+        const itemQuantity =
+            Math.max(
+                1,
+                parseInt(item.quantity, 10) || 1
+            );
+
+
+        const itemPrice =
+            Math.max(
+                0,
+                Number(item.price) || 0
+            );
+
+
+        quantity +=
+            itemQuantity;
+
+
+        subtotal +=
+            itemPrice *
+            itemQuantity;
+
+    });
+
+
+    let shipping = 0;
+
+
+    const selectedShipping =
+        document.querySelector(
+            'input[name="shipping"]:checked'
+        );
+
+
+    if (
+        selectedShipping &&
+        selectedShipping.value === "express"
+    ) {
+
+        shipping = 75000;
+
+    }
+
+
+    const discount = 0;
+
+
+    const total =
+        subtotal -
+        discount +
+        shipping;
+
+
+    return {
+        quantity,
+        subtotal,
+        discount,
+        shipping,
+        total
+    };
+
+}
+
+
+/* =========================================================
+   نمایش خلاصه سفارش
+========================================================= */
+
+function renderCheckout() {
+
+    const itemsContainer =
+        document.getElementById(
+            "checkout-items"
+        );
+
+
+    const quantityElement =
+        document.getElementById(
+            "checkout-quantity"
+        );
+
+
+    const subtotalElement =
+        document.getElementById(
+            "checkout-subtotal"
+        );
+
+
+    const discountElement =
+        document.getElementById(
+            "checkout-discount"
+        );
+
+
+    const shippingElement =
+        document.getElementById(
+            "shipping-price"
+        );
+
+
+    const totalElement =
+        document.getElementById(
+            "checkout-total"
+        );
+
+
+    if (!itemsContainer) {
+        return;
+    }
+
+
+    /* =========================================
+       سبد خالی
+    ========================================== */
+
+    if (
+        !Array.isArray(cart) ||
+        cart.length === 0
+    ) {
+
+        itemsContainer.innerHTML = `
+
+            <div class="checkout-empty">
+
+                سبد خرید شما خالی است.
+
+            </div>
+
+        `;
+
+
+        quantityElement.textContent =
+            "۰";
+
+
+        subtotalElement.textContent =
+            checkoutPrice(0);
+
+
+        discountElement.textContent =
+            checkoutPrice(0);
+
+
+        shippingElement.textContent =
+            "رایگان";
+
+
+        totalElement.textContent =
+            checkoutPrice(0);
+
+
+        return;
+
+    }
+
+
+    /* =========================================
+       محصولات
+    ========================================== */
+
+    itemsContainer.innerHTML =
+        cart.map(item => {
+
+
+            const quantity =
+                Math.max(
+                    1,
+                    parseInt(item.quantity, 10) || 1
+                );
+
+
+            const price =
+                Math.max(
+                    0,
+                    Number(item.price) || 0
+                );
+
+
+            const itemTotal =
+                price * quantity;
+
+
+            return `
+
+                <div class="checkout-item">
+
+                    <div class="checkout-item-info">
+
+                        <strong>
+                            ${item.title || "کتاب"}
+                        </strong>
+
+                        <span>
+
+                            ${checkoutPrice(price)}
+
+                            ×
+
+                            ${toPersianNumber(quantity)}
+
+                        </span>
+
+                    </div>
+
+
+                    <strong>
+
+                        ${checkoutPrice(itemTotal)}
+
+                    </strong>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    /* =========================================
+       محاسبه
+    ========================================== */
+
+    const result =
+        calculateCheckout();
+
+
+    quantityElement.textContent =
+        toPersianNumber(
+            result.quantity
+        );
+
+
+    subtotalElement.textContent =
+        checkoutPrice(
+            result.subtotal
+        );
+
+
+    discountElement.textContent =
+        checkoutPrice(
+            result.discount
+        );
+
+
+    shippingElement.textContent =
+        result.shipping === 0
+            ? "رایگان"
+            : checkoutPrice(
+                result.shipping
+            );
+
+
+    totalElement.textContent =
+        checkoutPrice(
+            result.total
+        );
+
+}
+
+
+/* =========================================================
+   تغییر روش ارسال
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="shipping"]'
+    )
+    .forEach(input => {
+
+        input.addEventListener(
+            "change",
+            renderCheckout
+        );
+
+    });
+
+
+/* =========================================================
+   اعتبارسنجی
+========================================================= */
+function submitOrder() {
+
+    if (
+        !Array.isArray(cart) ||
+        cart.length === 0
+    ) {
+
+        alert(
+            "سبد خرید شما خالی است."
+        );
+
+        return;
+
+    }
+
+
+    const requiredFields = [
+
+        "first-name",
+        "last-name",
+        "phone",
+        "province",
+        "county",
+        "city",
+        "address",
+        "postal-code"
+
+    ];
+
+
+    for (const id of requiredFields) {
+
+        const element =
+            document.getElementById(id);
+
+
+        if (
+            !element ||
+            !element.value.trim()
+        ) {
+
+            alert(
+                "لطفاً تمام اطلاعات ضروری سفارش را کامل کنید."
+            );
+
+            element?.focus();
+
+            return;
+
+        }
+
+    }
+
+
+    /* =========================================
+       محاسبه سفارش
+    ========================================== */
+
+    const result =
+        calculateCheckout();
+
+
+    /* =========================================
+       ساخت سفارش
+    ========================================== */
+
+    const order = {
+
+        id:
+            "RH-" +
+            Date.now(),
+
+        date:
+            new Date().toISOString(),
+
+        status:
+            "در حال پردازش",
+
+        customer: {
+
+            firstName:
+                document.getElementById(
+                    "first-name"
+                ).value.trim(),
+
+            lastName:
+                document.getElementById(
+                    "last-name"
+                ).value.trim(),
+
+            phone:
+                document.getElementById(
+                    "phone"
+                ).value.trim(),
+
+            email:
+                document.getElementById(
+                    "email"
+                )?.value.trim() || ""
+
+        },
+
+
+        address: {
+
+            province:
+                document.getElementById(
+                    "province"
+                ).value,
+
+            county:
+                document.getElementById(
+                    "county"
+                ).value,
+
+            city:
+                document.getElementById(
+                    "city"
+                ).value.trim(),
+
+            address:
+                document.getElementById(
+                    "address"
+                ).value.trim(),
+
+            postalCode:
+                document.getElementById(
+                    "postal-code"
+                ).value.trim(),
+
+            receiver:
+                document.getElementById(
+                    "receiver"
+                )?.value.trim() || ""
+
+        },
+
+
+        shipping:
+            document.querySelector(
+                'input[name="shipping"]:checked'
+            )?.value || "free",
+
+
+        shippingPrice:
+            result.shipping,
+
+
+        note:
+            document.getElementById(
+                "order-note"
+            )?.value.trim() || "",
+
+
+        quantity:
+            result.quantity,
+
+
+        subtotal:
+            result.subtotal,
+
+
+        discount:
+            result.discount,
+
+
+        total:
+            result.total,
+
+
+        items:
+            cart.map(item => ({
+
+                id:
+                    item.id,
+
+                title:
+                    item.title || "کتاب",
+
+                author:
+                    item.author || "",
+
+                publisher:
+                    item.publisher ||
+                    item.nashir ||
+                    "",
+
+                price:
+                    Number(item.price) || 0,
+
+                quantity:
+                    Math.max(
+                        1,
+                        parseInt(
+                            item.quantity,
+                            10
+                        ) || 1
+                    )
+
+            }))
+
+    };
+
+
+    /* =========================================
+       ذخیره سفارش
+    ========================================== */
+
+    let orders = [];
+
+    try {
+
+        orders =
+            JSON.parse(
+                localStorage.getItem(
+                    "rahnegar_orders"
+                )
+            ) || [];
+
+    } catch (error) {
+
+        orders = [];
+
+    }
+
+
+    orders.unshift(order);
+
+
+    localStorage.setItem(
+        "rahnegar_orders",
+        JSON.stringify(orders)
+    );
+
+
+    /* =========================================
+       پیام موفقیت
+    ========================================== */
+
+    alert(
+
+        "سفارش با موفقیت ثبت شد.\n\n" +
+
+        "شماره سفارش: " +
+        order.id +
+
+        "\nتعداد کتاب‌ها: " +
+        toPersianNumber(
+            result.quantity
+        ) +
+
+        "\nمبلغ کالاها: " +
+        checkoutPrice(
+            result.subtotal
+        ) +
+
+        "\nهزینه ارسال: " +
+        (
+            result.shipping === 0
+                ? "رایگان"
+                : checkoutPrice(
+                    result.shipping
+                )
+        ) +
+
+        "\nمبلغ نهایی: " +
+        checkoutPrice(
+            result.total
+        )
+
+    );
+
+
+    /* =========================================
+       انتقال به سفارش‌های من
+    ========================================== */
+
+    window.location.href =
+        "orders.html";
+
+}
+/* =========================================================
+   اجرا
+========================================================= */
+
+loadProvinces();
+
+updateCartCount();
+
+renderCheckout();
+
+</script>
+
+</body>
+
+</html>
+```

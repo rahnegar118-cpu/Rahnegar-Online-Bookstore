@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کتاب‌ها | رهنگر</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="logo">
+
+            <span class="logo-mark">
+                ر
+            </span>
+
+            <span class="logo-text">
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    فروشگاه کتاب
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                کتاب‌ها
+            </a>
+
+            <a href="#">
+                دسته‌بندی‌ها
+            </a>
+
+            <a href="#">
+                پرفروش‌ها
+            </a>
+
+            <a href="#">
+                پیشنهاد ویژه
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a
+                href="account.html"
+                class="account-btn"
+            >
+                حساب کاربری
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+            >
+
+                سبد خرید
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        کتابخانه رهنگر
+                    </span>
+
+                    <h1>
+                        همه کتاب‌ها
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ابزار جستجو -->
+
+            <div class="books-tools">
+
+                <input
+                    type="text"
+                    id="book-search"
+                    placeholder="جستجوی نام کتاب یا نویسنده..."
+                >
+
+
+                <select id="category-filter">
+
+                    <option value="all">
+                        همه دسته‌بندی‌ها
+                    </option>
+
+                    <option value="فلسفه">
+                        فلسفه
+                    </option>
+
+                    <option value="فقه">
+                        فقه
+                    </option>
+
+                    <option value="اصول">
+                        اصول
+                    </option>
+
+                    <option value="ادبیات">
+                        ادبیات
+                    </option>
+
+                    <option value="اخلاق">
+                        اخلاق
+                    </option>
+
+                    <option value="تفسیر">
+                        تفسیر
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- =========================
+                 کتاب‌ها
+            ========================== -->
+
+            <div
+                class="books-grid"
+                id="books-grid"
+            >
+
+
+                <!-- ۱ -->
+
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                شرح منظومه
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            فلسفه
+                        </span>
+
+
+                        <h3>
+
+                            <a href="book.html">
+                                شرح منظومه
+                            </a>
+
+                        </h3>
+
+
+                        <p>
+                            علامه طباطبایی
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۴۵۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 1,
+                                    title: 'شرح منظومه',
+                                    author: 'علامه طباطبایی',
+                                    price: 450000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ۲ -->
+
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                بدایة الحکمة
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            فلسفه
+                        </span>
+
+
+                        <h3>
+                            بدایة الحکمة
+                        </h3>
+
+
+                        <p>
+                            علامه طباطبایی
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۳۸۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 2,
+                                    title: 'بدایة الحکمة',
+                                    author: 'علامه طباطبایی',
+                                    price: 380000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ۳ -->
+
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                نهایة الحکمة
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            فلسفه
+                        </span>
+
+
+                        <h3>
+                            نهایة الحکمة
+                        </h3>
+
+
+                        <p>
+                            علامه طباطبایی
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۴۲۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 3,
+                                    title: 'نهایة الحکمة',
+                                    author: 'علامه طباطبایی',
+                                    price: 420000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ۴ -->
+
+                <article
+                    class="book-card"
+                    data-category="اصول"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                رسائل
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            اصول
+                        </span>
+
+
+                        <h3>
+                            رسائل
+                        </h3>
+
+
+                        <p>
+                            شیخ مرتضی انصاری
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۵۰۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 4,
+                                    title: 'رسائل',
+                                    author: 'شیخ مرتضی انصاری',
+                                    price: 500000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ۵ -->
+
+                <article
+                    class="book-card"
+                    data-category="فقه"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                مکاسب
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            فقه
+                        </span>
+
+
+                        <h3>
+                            مکاسب
+                        </h3>
+
+
+                        <p>
+                            شیخ مرتضی انصاری
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۵۵۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 5,
+                                    title: 'مکاسب',
+                                    author: 'شیخ مرتضی انصاری',
+                                    price: 550000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ۶ -->
+
+                <article
+                    class="book-card"
+                    data-category="اخلاق"
+                >
+
+                    <a href="book.html">
+
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                عنوان بصری
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                    <div class="book-info">
+
+                        <span class="book-category">
+                            اخلاق
+                        </span>
+
+
+                        <h3>
+                            عنوان بصری
+                        </h3>
+
+
+                        <p>
+                            مجموعه اخلاقی
+                        </p>
+
+
+                        <div class="book-bottom">
+
+                            <strong>
+                                ۲۹۰٬۰۰۰ تومان
+                            </strong>
+
+
+                            <button
+                                type="button"
+                                onclick="addToCart({
+                                    id: 6,
+                                    title: 'عنوان بصری',
+                                    author: 'مجموعه اخلاقی',
+                                    price: 290000
+                                })"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <div class="footer-bottom">
+
+        © تمامی حقوق برای فروشگاه کتاب رهنگر محفوظ است.
+
+    </div>
+
+</footer>
+
+
+
+<!-- فقط یک بار -->
+
+<script src="script.js"></script>
+<script>
+
+/* =====================================================
+   جستجو و فیلتر کتاب‌ها
+===================================================== */
+
+const searchInput = document.getElementById("book-search");
+const categoryFilter = document.getElementById("category-filter");
+const bookCards = document.querySelectorAll(".book-card");
+
+
+function normalizeText(text) {
+
+    return String(text || "")
+        .trim()
+        .toLowerCase()
+        .replace(/ي/g, "ی")
+        .replace(/ى/g, "ی")
+        .replace(/ك/g, "ک")
+        .replace(/\u200c/g, " ")
+        .replace(/\s+/g, " ");
+
+}
+
+
+function filterBooks() {
+
+    const search = normalizeText(searchInput.value);
+
+    const category = categoryFilter.value;
+
+    let foundBooks = 0;
+
+
+    bookCards.forEach(card => {
+
+        const title =
+            normalizeText(
+                card.querySelector("h3")?.innerText
+            );
+
+        const author =
+            normalizeText(
+                card.querySelector(".book-info p")?.innerText
+            );
+
+        const bookCategory =
+            normalizeText(
+                card.querySelector(".book-category")?.innerText
+            );
+
+
+        const matchesSearch =
+            !search ||
+            title.includes(search) ||
+            author.includes(search) ||
+            bookCategory.includes(search);
+
+
+        const matchesCategory =
+            category === "all" ||
+            normalizeText(card.dataset.category) ===
+            normalizeText(category);
+
+
+        if (
+            matchesSearch &&
+            matchesCategory
+        ) {
+
+            card.style.display = "";
+
+            foundBooks++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    let emptyMessage =
+        document.getElementById("search-empty-message");
+
+
+    if (!emptyMessage) {
+
+        emptyMessage = document.createElement("div");
+
+        emptyMessage.id = "search-empty-message";
+
+        emptyMessage.style.cssText = `
+            width: 100%;
+            padding: 45px 20px;
+            margin-top: 25px;
+            text-align: center;
+            border: 1px solid #e3d5c2;
+            border-radius: 18px;
+            background: #faf6ef;
+            color: #5b4637;
+            font-family: inherit;
+        `;
+
+        emptyMessage.innerHTML = `
+            <div style="font-size:38px;margin-bottom:12px;">
+                📚
+            </div>
+
+            <h3 style="margin:0 0 8px;">
+                کتابی پیدا نشد
+            </h3>
+
+            <p style="margin:0;color:#8a7a6b;">
+                عبارت جستجو یا دسته‌بندی دیگری را امتحان کنید.
+            </p>
+        `;
+
+        document
+            .getElementById("books-grid")
+            .after(emptyMessage);
+
+    }
+
+
+    emptyMessage.style.display =
+        foundBooks === 0 ? "block" : "none";
+
+}
+
+
+/* =====================================================
+   دریافت جستجو از صفحه اصلی
+===================================================== */
+
+const urlParams =
+    new URLSearchParams(window.location.search);
+
+const searchFromHome =
+    urlParams.get("search");
+
+
+if (searchFromHome) {
+
+    searchInput.value = searchFromHome;
+
+}
+
+
+/* =====================================================
+   رویدادها
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    filterBooks
+);
+
+
+categoryFilter.addEventListener(
+    "change",
+    filterBooks
+);
+
+
+/* =====================================================
+   اجرای اولیه
+===================================================== */
+
+filterBooks();
+
+
+if (typeof updateCartCount === "function") {
+
+    updateCartCount();
+
+}
+
+/* منوی زیبای دسته‌بندی‌ها */
+
+const originalCategory = document.getElementById("category-filter");
+
+if (originalCategory) {
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "category-custom";
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "category-custom-button";
+
+    const buttonText = document.createElement("span");
+    buttonText.textContent =
+        originalCategory.options[originalCategory.selectedIndex].textContent.trim();
+
+    const arrow = document.createElement("span");
+    arrow.className = "category-arrow";
+    arrow.textContent = "⌄";
+
+    button.appendChild(buttonText);
+    button.appendChild(arrow);
+
+    const menu = document.createElement("div");
+    menu.className = "category-custom-menu";
+
+    Array.from(originalCategory.options).forEach(option => {
+
+        const item = document.createElement("div");
+
+        item.className = "category-custom-option";
+        item.textContent = option.textContent.trim();
+
+        if (option.value === originalCategory.value) {
+            item.classList.add("active");
+        }
+
+        item.addEventListener("click", function () {
+
+            originalCategory.value = option.value;
+
+            buttonText.textContent =
+                option.textContent.trim();
+
+            menu.querySelectorAll(
+                ".category-custom-option"
+            ).forEach(el => {
+                el.classList.remove("active");
+            });
+
+            item.classList.add("active");
+
+            originalCategory.dispatchEvent(
+                new Event("change", {
+                    bubbles: true
+                })
+            );
+
+            wrapper.classList.remove("open");
+        });
+
+        menu.appendChild(item);
+    });
+
+    wrapper.appendChild(button);
+    wrapper.appendChild(menu);
+
+    originalCategory.style.display = "none";
+
+    originalCategory.parentNode.insertBefore(
+        wrapper,
+        originalCategory
+    );
+
+    button.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        wrapper.classList.toggle("open");
+
+    });
+
+    document.addEventListener("click", function () {
+        wrapper.classList.remove("open");
+    });
+
+    menu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+}
+
+</script>
+</body>
+
+</html>

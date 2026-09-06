@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>شرح منظومه | رهنگر</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a href="../index.html" class="logo">
+            رهنگر
+            <span>کتاب‌فروشی آنلاین</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../index.html">خانه</a>
+            <a href="books.html">فروشگاه</a>
+            <a href="cart.html">سبد خرید</a>
+            <a href="account.html">حساب کاربری</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="book-detail">
+
+        <div class="book-cover-large">
+            📚
+        </div>
+
+
+        <div class="book-info">
+
+            <span class="book-category">
+                فلسفه
+            </span>
+
+            <h1>
+                شرح منظومه
+            </h1>
+
+            <p class="book-author">
+                اثر علامه طباطبایی
+            </p>
+
+            <p class="book-description">
+                شرح و بررسی مباحث حکمت و فلسفه اسلامی،
+                مناسب برای مطالعه و پژوهش در مباحث فلسفی.
+            </p>
+
+
+            <div class="book-specs">
+
+                <div>
+                    <span>نویسنده</span>
+                    <strong>علامه طباطبایی</strong>
+                </div>
+
+                <div>
+                    <span>ناشر</span>
+                    <strong>انتشارات حکمت</strong>
+                </div>
+
+                <div>
+                    <span>سال انتشار</span>
+                    <strong>۱۴۰۴</strong>
+                </div>
+
+                <div>
+                    <span>تعداد صفحات</span>
+                    <strong>۵۲۰ صفحه</strong>
+                </div>
+
+                <div>
+                    <span>وضعیت</span>
+                    <strong>موجود</strong>
+                </div>
+
+            </div>
+
+
+            <div class="book-purchase">
+
+                <div class="book-price">
+                    <span>۴۵۰٬۰۰۰ تومان</span>
+                </div>
+
+                <button
+                    class="btn-primary"
+                    onclick="addToCart({
+                        id: 1,
+                        title: 'شرح منظومه',
+                        author: 'علامه طباطبایی',
+                        price: 450000
+                    })"
+                >
+                    افزودن به سبد خرید
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="book-content">
+
+        <div>
+
+            <h2>
+                معرفی کتاب
+            </h2>
+
+            <p>
+                کتاب شرح منظومه یکی از آثار مهم در حوزه فلسفه اسلامی
+                است که مباحث گوناگون حکمت را با رویکردی دقیق بررسی می‌کند.
+                این کتاب برای علاقه‌مندان به فلسفه و دانشجویان و طلاب
+                حوزه‌های علمی مناسب است.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h2>
+                مشخصات کتاب
+            </h2>
+
+            <ul>
+                <li>نویسنده: علامه طباطبایی</li>
+                <li>ناشر: انتشارات حکمت</li>
+                <li>موضوع: فلسفه اسلامی</li>
+                <li>تعداد صفحات: ۵۲۰</li>
+                <li>نوع جلد: گالینگور</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <h3>رهنگر</h3>
+
+        <p>
+            کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
+        </p>
+
+        <div class="footer-bottom">
+            © تمامی حقوق برای رهنگر محفوظ است.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<style>
+
+.book-detail {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 50px;
+    padding: 50px 0;
+    align-items: start;
+}
+
+.book-cover-large {
+    height: 480px;
+    background: #f1e8dc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    border: 1px solid #eadfce;
+}
+
+.book-category {
+    display: inline-block;
+    background: #f3eadf;
+    color: #6d5542;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.book-info h1 {
+    font-size: 38px;
+    color: #4b2e20;
+    margin: 18px 0 8px;
+}
+
+.book-author {
+    color: #806c5a;
+    font-size: 17px;
+}
+
+.book-description {
+    color: #766b62;
+    line-height: 2;
+    margin: 25px 0;
+}
+
+.book-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.book-specs div {
+    background: #fff;
+    border: 1px solid #eadfce;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.book-specs span {
+    display: block;
+    color: #91857a;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.book-specs strong {
+    color: #4b2e20;
+}
+
+.book-purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eadfce;
+}
+
+.book-price span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4b2e20;
+}
+
+.book-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+
+.book-content > div {
+    background: #fff;
+    border: 1px solid #eadfce;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.book-content h2 {
+    color: #4b2e20;
+    margin-top: 0;
+}
+
+.book-content p,
+.book-content li {
+    color: #766b62;
+    line-height: 2;
+}
+
+.book-content ul {
+    padding-right: 20px;
+}
+
+
+@media (max-width: 800px) {
+
+    .book-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover-large {
+        height: 380px;
+    }
+
+    .book-info h1 {
+        font-size: 30px;
+    }
+
+    .book-content {
+        grid-template-columns: 1fr;
+    }
+
+    .book-purchase {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+</style>
+
+
+<script src="../script.js"></script>
+
+</body>
+</html>

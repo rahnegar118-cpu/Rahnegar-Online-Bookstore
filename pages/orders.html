@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>سفارش‌های من | رهنگر</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <a
+            href="../index.html"
+            class="logo"
+        >
+            رهنگر
+            <span>کتاب‌فروشی آنلاین</span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                فروشگاه
+            </a>
+
+            <a href="cart.html">
+                سبد خرید
+            </a>
+
+            <a
+                href="account.html"
+                class="active"
+            >
+                حساب کاربری
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <section class="page-header">
+
+        <span class="orders-eyebrow">
+            RAHNEGAR ACCOUNT
+        </span>
+
+        <h1>
+            سفارش‌های من
+        </h1>
+
+        <p>
+            سفارش‌های ثبت‌شده و وضعیت خریدهای شما
+        </p>
+
+    </section>
+
+
+
+    <section class="orders-layout">
+
+
+        <!-- منوی حساب -->
+
+        <aside class="account-sidebar">
+
+            <div class="account-profile">
+
+                <div class="profile-avatar">
+                    م
+                </div>
+
+                <h3>
+                    کاربر رهنگر
+                </h3>
+
+                <p>
+                    خوش آمدید
+                </p>
+
+            </div>
+
+
+            <nav class="account-menu">
+
+                <a href="account.html">
+                    داشبورد
+                </a>
+
+                <a
+                    href="orders.html"
+                    class="active"
+                >
+                    سفارش‌های من
+                </a>
+
+                <a href="#">
+                    آدرس‌ها
+                </a>
+
+                <a href="#">
+                    علاقه‌مندی‌ها
+                </a>
+
+                <a href="#">
+                    اطلاعات حساب
+                </a>
+
+                <a href="#">
+                    خروج از حساب
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- محتوای سفارش‌ها -->
+
+        <section class="orders-content">
+
+
+            <!-- خلاصه سفارش -->
+
+            <div class="orders-summary">
+
+                <div class="orders-summary-info">
+
+                    <span>
+                        وضعیت سفارش‌ها
+                    </span>
+
+                    <h2>
+                        سفارش‌های شما
+                    </h2>
+
+                    <p>
+                        سفارش‌های اخیر خود را مشاهده و
+                        وضعیت آن‌ها را پیگیری کنید.
+                    </p>
+
+                </div>
+
+
+                <div class="orders-count">
+
+                    <strong id="orders-count-number">
+                        ۰
+                    </strong>
+
+                    <small>
+                        سفارش
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- سفارش‌ها -->
+
+            <div id="orders-list"></div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <h3>
+            رهنگر
+        </h3>
+
+        <p>
+            کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
+        </p>
+
+        <div class="footer-bottom">
+            © تمامی حقوق برای رهنگر محفوظ است.
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<style>
+
+/* =========================================
+   سفارش‌های رهنگر
+========================================= */
+
+.orders-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        270px minmax(0, 1fr);
+
+    gap: 28px;
+
+    margin:
+        35px 0 80px;
+}
+
+
+.orders-content {
+
+    min-width: 0;
+}
+
+
+.orders-eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #a0835c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   خلاصه سفارش
+========================================= */
+
+.orders-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 28px 30px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f0e6,
+            #eee0cf
+        );
+
+    border: 1px solid #e3d2bd;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 35px rgba(
+            75,
+            46,
+            32,
+            0.08
+        );
+}
+
+
+.orders-summary-info {
+
+    min-width: 0;
+}
+
+
+.orders-summary-info span {
+
+    color: #a0835c;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.orders-summary-info h2 {
+
+    margin:
+        7px 0 8px;
+
+    color: #3d271d;
+
+    font-size: 24px;
+}
+
+
+.orders-summary-info p {
+
+    margin: 0;
+
+    color: #77685c;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+.orders-count {
+
+    width: 82px;
+
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #573726,
+            #3c2419
+        );
+
+    color: #f8ead7;
+
+    box-shadow:
+        0 12px 25px rgba(
+            65,
+            38,
+            25,
+            0.2
+        );
+}
+
+
+.orders-count strong {
+
+    font-size: 29px;
+
+    line-height: 1;
+}
+
+
+.orders-count small {
+
+    margin-top: 6px;
+
+    color: #dfc8a9;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================
+   کارت سفارش
+========================================= */
+
+.order-card {
+
+    overflow: hidden;
+
+    margin-bottom: 18px;
+
+    background: #fffdfa;
+
+    border:
+        1px solid #e4d7c8;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 38px rgba(
+            75,
+            46,
+            32,
+            0.08
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.order-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 18px 45px rgba(
+            75,
+            46,
+            32,
+            0.11
+        );
+}
+
+
+/* =========================================
+   هدر سفارش
+========================================= */
+
+.order-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 23px 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #faf5ee,
+            #f4eadf
+        );
+
+    border-bottom:
+        1px solid #eadfd3;
+}
+
+
+.order-number {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.order-number span {
+
+    color: #9a8979;
+
+    font-size: 11px;
+}
+
+
+.order-number strong {
+
+    color: #493126;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+}
+
+
+.order-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 36px;
+
+    padding:
+        0 15px;
+
+    border-radius: 999px;
+
+    background: #e8f1e8;
+
+    color: #54705a;
+
+    border:
+        1px solid #d4e3d4;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+
+/* =========================================
+   اطلاعات سفارش
+========================================= */
+
+.order-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 1px;
+
+    background: #e8ded2;
+
+    border-bottom:
+        1px solid #e8ded2;
+}
+
+
+.order-info-item {
+
+    padding:
+        20px 22px;
+
+    background: #fffdfa;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.order-info-item span {
+
+    color: #9a8979;
+
+    font-size: 11px;
+}
+
+
+.order-info-item strong {
+
+    color: #493126;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================
+   کتاب‌های سفارش
+========================================= */
+
+.order-books {
+
+    padding:
+        24px 26px 10px;
+}
+
+
+.order-books-title {
+
+    margin-bottom: 16px;
+
+    color: #493126;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.order-book {
+
+    display: grid;
+
+    grid-template-columns:
+        58px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        14px 0;
+
+    border-bottom:
+        1px solid #eee5dc;
+}
+
+
+.order-book:last-child {
+
+    border-bottom: none;
+}
+
+
+.order-book-cover {
+
+    width: 58px;
+
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eee0ce,
+            #dfccb3
+        );
+
+    color: #694a37;
+
+    font-size: 25px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(
+            75,
+            46,
+            32,
+            0.05
+        );
+}
+
+
+.order-book-details {
+
+    min-width: 0;
+}
+
+
+.order-book-details h3 {
+
+    margin:
+        0 0 6px;
+
+    color: #493126;
+
+    font-size: 14px;
+}
+
+
+.order-book-details p {
+
+    margin:
+        0 0 5px;
+
+    color: #847468;
+
+    font-size: 12px;
+}
+
+
+.order-book-details span {
+
+    color: #a0835c;
+
+    font-size: 11px;
+}
+
+
+.order-book-price {
+
+    color: #4b2e20;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+
+/* =========================================
+   پایین سفارش
+========================================= */
+
+.order-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        20px 26px;
+
+    background: #faf6f0;
+
+    border-top:
+        1px solid #eee5dc;
+}
+
+
+.order-payment {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.order-payment span {
+
+    color: #9a8979;
+
+    font-size: 11px;
+}
+
+
+.order-payment strong {
+
+    color: #493126;
+
+    font-size: 13px;
+}
+
+
+.order-detail-button {
+
+    min-height: 42px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid #d5c2ab;
+
+    border-radius: 12px;
+
+    background: #fffdfa;
+
+    color: #573726;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.order-detail-button:hover {
+
+    background: #573726;
+
+    color: #fff;
+
+    border-color: #573726;
+}
+
+
+
+/* =========================================
+   حالت بدون سفارش
+========================================= */
+
+.orders-empty {
+
+    padding:
+        55px 25px;
+
+    text-align: center;
+
+    background: #fffdfa;
+
+    border:
+        1px solid #e4d7c8;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 38px rgba(
+            75,
+            46,
+            32,
+            0.06
+        );
+}
+
+
+.orders-empty-icon {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin:
+        0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eee0ce,
+            #dfccb3
+        );
+
+    font-size: 30px;
+}
+
+
+.orders-empty h2 {
+
+    margin:
+        0 0 8px;
+
+    color: #493126;
+
+    font-size: 20px;
+}
+
+
+.orders-empty p {
+
+    margin:
+        0 auto 22px;
+
+    max-width: 450px;
+
+    color: #847468;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+.orders-empty a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 45px;
+
+    padding:
+        0 22px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #573726,
+            #3d251a
+        );
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 9px 20px rgba(
+            65,
+            38,
+            25,
+            0.16
+        );
+}
+
+
+
+/* =========================================
+   سایدبار حساب کاربری
+========================================= */
+
+.account-sidebar {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8f0e6,
+            #eee0cf
+        );
+
+    border:
+        1px solid #e2d1bd;
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    height: fit-content;
+
+    box-shadow:
+        0 14px 35px rgba(
+            75,
+            46,
+            32,
+            0.08
+        );
+}
+
+
+.account-profile {
+
+    text-align: center;
+
+    padding-bottom: 22px;
+
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid #dfcdb8;
+}
+
+
+.profile-avatar {
+
+    width: 76px;
+
+    height: 76px;
+
+    margin:
+        0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #573726,
+            #3d251a
+        );
+
+    color: #f3dfc3;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 24px rgba(
+            65,
+            38,
+            25,
+            0.18
+        );
+}
+
+
+.account-profile h3 {
+
+    margin:
+        0 0 6px;
+
+    color: #493126;
+
+    font-size: 16px;
+}
+
+
+.account-profile p {
+
+    margin: 0;
+
+    color: #8b7868;
+
+    font-size: 12px;
+}
+
+
+.account-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.account-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 45px;
+
+    padding:
+        0 15px;
+
+    border-radius: 12px;
+
+    color: #705e50;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.account-menu a:hover {
+
+    background: #f1e5d7;
+
+    color: #493126;
+
+    transform:
+        translateX(-2px);
+}
+
+
+.account-menu a.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            #573726,
+            #3d251a
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 8px 18px rgba(
+            65,
+            38,
+            25,
+            0.16
+        );
+}
+
+
+.account-menu a.active:hover {
+
+    transform: none;
+}
+
+
+
+/* =========================================
+   موبایل
+========================================= */
+
+@media (max-width: 900px) {
+
+    .orders-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .account-sidebar {
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .account-menu {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .orders-summary {
+
+        padding: 22px;
+
+    }
+
+
+    .orders-count {
+
+        width: 68px;
+
+        height: 68px;
+
+        border-radius: 19px;
+
+    }
+
+
+    .orders-summary-info h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .order-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+    }
+
+
+    .order-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .order-info-item {
+
+        padding:
+            14px 20px;
+
+    }
+
+
+    .order-books {
+
+        padding:
+            20px 18px 8px;
+
+    }
+
+
+    .order-book {
+
+        grid-template-columns:
+            52px minmax(0, 1fr);
+
+    }
+
+
+    .order-book-cover {
+
+        width: 52px;
+
+        height: 62px;
+
+    }
+
+
+    .order-book-price {
+
+        grid-column: 2;
+
+        margin-top: -5px;
+
+    }
+
+
+    .order-footer {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+        padding:
+            18px;
+
+    }
+
+
+    .order-detail-button {
+
+        width: 100%;
+
+    }
+
+
+    .account-menu {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =========================================
+   ابزارها
+========================================= */
+
+function toPersianNumber(value) {
+
+    return String(value)
+        .replace(/\d/g, function (digit) {
+
+            return "۰۱۲۳۴۵۶۷۸۹"[digit];
+
+        });
+
+}
+
+
+function formatPrice(value) {
+
+    const number =
+        Number(value) || 0;
+
+    return (
+        number
+            .toLocaleString("fa-IR")
+        + " تومان"
+    );
+
+}
+
+
+function formatOrderDate(dateString) {
+
+    if (!dateString) {
+
+        return "تاریخ ثبت نشده";
+
+    }
+
+    const date =
+        new Date(dateString);
+
+    if (
+        Number.isNaN(
+            date.getTime()
+        )
+    ) {
+
+        return "تاریخ ثبت نشده";
+
+    }
+
+    return new Intl.DateTimeFormat(
+        "fa-IR",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    ).format(date);
+
+}
+
+
+
+/* =========================================
+   خواندن سفارش‌ها
+========================================= */
+
+function getOrders() {
+
+    try {
+
+        const savedOrders =
+            localStorage.getItem(
+                "rahnegar_orders"
+            );
+
+        if (!savedOrders) {
+
+            return [];
+
+        }
+
+        const orders =
+            JSON.parse(savedOrders);
+
+        if (!Array.isArray(orders)) {
+
+            return [];
+
+        }
+
+        return orders;
+
+    } catch (error) {
+
+        console.error(
+            "خطا در خواندن سفارش‌ها:",
+            error
+        );
+
+        return [];
+
+    }
+
+}
+
+
+
+/* =========================================
+   نمایش سفارش‌ها
+========================================= */
+
+function renderOrders() {
+
+    const orders =
+        getOrders();
+
+
+    const countElement =
+        document.getElementById(
+            "orders-count-number"
+        );
+
+
+    const listElement =
+        document.getElementById(
+            "orders-list"
+        );
+
+
+    if (!countElement || !listElement) {
+
+        return;
+
+    }
+
+
+    countElement.textContent =
+        toPersianNumber(
+            orders.length
+        );
+
+
+    if (orders.length === 0) {
+
+        listElement.innerHTML = `
+
+            <div class="orders-empty">
+
+                <div class="orders-empty-icon">
+                    📚
+                </div>
+
+                <h2>
+                    هنوز سفارشی ثبت نکرده‌اید
+                </h2>
+
+                <p>
+                    کتاب مورد علاقه‌تان را از فروشگاه
+                    انتخاب کنید و اولین سفارش خود را ثبت کنید.
+                </p>
+
+                <a href="books.html">
+                    رفتن به فروشگاه
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    listElement.innerHTML =
+        orders.map(function(order) {
+
+            return renderOrder(order);
+
+        }).join("");
+
+}
+
+
+
+/* =========================================
+   ساخت کارت سفارش
+========================================= */
+
+function renderOrder(order) {
+
+    const items =
+        Array.isArray(order.items)
+            ? order.items
+            : [];
+
+
+    const booksHTML =
+        items.length > 0
+
+            ? items.map(function(item) {
+
+                const quantity =
+                    Math.max(
+                        1,
+                        Number(
+                            item.quantity
+                        ) || 1
+                    );
+
+
+                return `
+
+                    <div class="order-book">
+
+                        <div class="order-book-cover">
+                            📖
+                        </div>
+
+                        <div class="order-book-details">
+
+                            <h3>
+                                ${escapeHTML(
+                                    item.title ||
+                                    "کتاب"
+                                )}
+                            </h3>
+
+                            <p>
+                                نویسنده:
+                                ${escapeHTML(
+                                    item.author ||
+                                    "ثبت نشده"
+                                )}
+                            </p>
+
+                            <span>
+                                تعداد:
+                                ${toPersianNumber(
+                                    quantity
+                                )}
+                            </span>
+
+                        </div>
+
+                        <strong class="order-book-price">
+
+                            ${formatPrice(
+                                (
+                                    Number(
+                                        item.price
+                                    ) || 0
+                                ) * quantity
+                            )}
+
+                        </strong>
+
+                    </div>
+
+                `;
+
+            }).join("")
+
+            : `
+
+                <div class="order-book">
+
+                    <div class="order-book-details">
+
+                        <h3>
+                            اطلاعات کتاب‌ها موجود نیست
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+
+    const quantity =
+        Number(order.quantity) || 0;
+
+
+    const total =
+        Number(order.total) || 0;
+
+
+    const shipping =
+        Number(order.shippingPrice) || 0;
+
+
+
+    return `
+
+        <article class="order-card">
+
+
+            <div class="order-header">
+
+                <div class="order-number">
+
+                    <span>
+                        شماره سفارش
+                    </span>
+
+                    <strong>
+                        ${escapeHTML(
+                            order.id ||
+                            "بدون شماره"
+                        )}
+                    </strong>
+
+                </div>
+
+
+                <div class="order-status">
+
+                    ${escapeHTML(
+                        order.status ||
+                        "در حال پردازش"
+                    )}
+
+                </div>
+
+            </div>
+
+
+
+            <div class="order-info">
+
+
+                <div class="order-info-item">
+
+                    <span>
+                        تاریخ سفارش
+                    </span>
+
+                    <strong>
+                        ${formatOrderDate(
+                            order.date
+                        )}
+                    </strong>
+
+                </div>
+
+
+                <div class="order-info-item">
+
+                    <span>
+                        تعداد کتاب
+                    </span>
+
+                    <strong>
+                        ${toPersianNumber(
+                            quantity
+                        )}
+                        کتاب
+                    </strong>
+
+                </div>
+
+
+                <div class="order-info-item">
+
+                    <span>
+                        مبلغ سفارش
+                    </span>
+
+                    <strong>
+                        ${formatPrice(
+                            total
+                        )}
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="order-books">
+
+                <div class="order-books-title">
+                    کتاب‌های سفارش
+                </div>
+
+                ${booksHTML}
+
+            </div>
+
+
+
+            <div class="order-footer">
+
+                <div class="order-payment">
+
+                    <span>
+                        روش پرداخت
+                    </span>
+
+                    <strong>
+                        ${
+                            order.paymentGateway
+                                ? escapeHTML(
+                                    order.paymentGateway
+                                )
+                                : "درگاه آنلاین"
+                        }
+                    </strong>
+
+                </div>
+
+
+                <div class="order-actions">
+
+                    <button
+                        type="button"
+                        class="order-detail-button"
+                        onclick="showOrderDetails('${escapeAttribute(
+                            order.id || ""
+                        )}')"
+                    >
+                        مشاهده جزئیات
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* =========================================
+   امنیت نمایش متن
+========================================= */
+
+function escapeHTML(value) {
+
+    return String(value)
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+    return String(value)
+
+        .replace(/\\/g, "\\\\")
+
+        .replace(/'/g, "\\'")
+
+        .replace(/"/g, "&quot;");
+
+}
+
+
+
+/* =========================================
+   مشاهده جزئیات
+========================================= */
+
+function showOrderDetails(orderId) {
+
+    const orders =
+        getOrders();
+
+
+    const order =
+        orders.find(function(item) {
+
+            return item.id === orderId;
+
+        });
+
+
+    if (!order) {
+
+        alert(
+            "اطلاعات این سفارش پیدا نشد."
+        );
+
+        return;
+
+    }
+
+
+    const shipping =
+        Number(
+            order.shippingPrice
+        ) || 0;
+
+
+    alert(
+
+        "شماره سفارش: " +
+        order.id +
+
+        "\n\nتاریخ: " +
+        formatOrderDate(
+            order.date
+        ) +
+
+        "\nوضعیت: " +
+        (
+            order.status ||
+            "در حال پردازش"
+        ) +
+
+        "\nتعداد کتاب: " +
+        toPersianNumber(
+            order.quantity || 0
+        ) +
+
+        "\nمبلغ کالاها: " +
+        formatPrice(
+            order.subtotal || 0
+        ) +
+
+        "\nهزینه ارسال: " +
+        (
+            shipping === 0
+                ? "رایگان"
+                : formatPrice(
+                    shipping
+                )
+        ) +
+
+        "\nمبلغ نهایی: " +
+        formatPrice(
+            order.total || 0
+        )
+
+    );
+
+}
+
+
+
+/* =========================================
+   اجرا
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        renderOrders();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
