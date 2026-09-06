@@ -12,16 +12,32 @@
 
 <body>
 
-<header class="site-header">
+<header class="header">
 
     <div class="container header-inner">
 
         <a href="../index.html" class="logo">
-            رهنگر
-            <span>کتاب‌فروشی آنلاین</span>
+
+            <div class="logo-mark">
+                ر
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    کتاب‌فروشی آنلاین
+                </small>
+
+            </div>
+
         </a>
 
-        <nav class="main-nav">
+
+        <nav class="nav">
 
             <a href="../index.html">
                 خانه
@@ -35,59 +51,103 @@
                 حساب کاربری
             </a>
 
-            <a href="cart.html" class="active">
-                سبد خرید
-                <span id="cart-count">۰</span>
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a href="account.html" class="account-btn">
+                حساب کاربری
             </a>
 
-        </nav>
+            <a href="cart.html" class="cart-btn">
+
+                سبد خرید
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
+            </a>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<main class="container">
+<main>
 
-    <section class="page-header">
+    <section class="cart-hero">
 
-        <h1>
-            سبد خرید
-        </h1>
+        <div class="container">
 
-        <p>
-            کتاب‌های انتخاب‌شده شما
-        </p>
+            <span class="cart-eyebrow">
+                RAHNEGAR BOOKSTORE
+            </span>
+
+            <h1>
+                سبد خرید
+            </h1>
+
+            <p>
+                انتخاب‌های شما آماده‌اند تا راهی کتابخانه‌تان شوند.
+            </p>
+
+        </div>
 
     </section>
 
 
-    <section class="cart-page">
+    <section class="container cart-page">
 
 
-        <!-- ============================= -->
-        <!-- محصولات سبد -->
-        <!-- ============================= -->
+        <div class="cart-main">
 
-        <div class="cart-items" id="cart-items">
+            <div class="cart-title-row">
 
-            <!--
-                محصولات توسط JavaScript
-                اینجا قرار می‌گیرند.
-            -->
+                <div>
+
+                    <span>
+                        انتخاب‌های شما
+                    </span>
+
+                    <h2>
+                        کتاب‌های سبد خرید
+                    </h2>
+
+                </div>
+
+                <a href="books.html">
+                    ← ادامه خرید
+                </a>
+
+            </div>
+
+
+            <div
+                class="cart-items"
+                id="cart-items"
+            >
+            </div>
 
         </div>
 
 
-        <!-- ============================= -->
-        <!-- خلاصه سفارش -->
-        <!-- ============================= -->
-
         <aside class="cart-summary">
 
-            <h2>
-                خلاصه سفارش
-            </h2>
+            <div class="summary-heading">
+
+                <span>
+                    سفارش شما
+                </span>
+
+                <h2>
+                    خلاصه خرید
+                </h2>
+
+            </div>
 
 
             <div class="summary-row">
@@ -119,17 +179,17 @@
             <div class="summary-row">
 
                 <span>
-                    هزینه ارسال
+                    ارسال
                 </span>
 
-                <strong>
-                    محاسبه در مرحله بعد
+                <strong class="free-shipping">
+                    رایگان
                 </strong>
 
             </div>
 
 
-            <hr>
+            <div class="summary-line"></div>
 
 
             <div class="summary-total">
@@ -147,19 +207,27 @@
 
             <a
                 href="checkout.html"
-                class="btn-primary"
+                class="checkout-button"
                 id="checkout-button"
             >
                 ادامه فرایند خرید
+
+                <span>
+                    ←
+                </span>
+
             </a>
 
 
-            <a
-                href="books.html"
-                class="continue-shopping"
-            >
-                ← ادامه خرید
-            </a>
+            <div class="secure-payment">
+
+                <span>
+                    ◈
+                </span>
+
+                پرداخت امن و مطمئن
+
+            </div>
 
         </aside>
 
@@ -168,17 +236,9 @@
 </main>
 
 
-<footer class="site-footer">
+<footer class="footer">
 
     <div class="container">
-
-        <h3>
-            رهنگر
-        </h3>
-
-        <p>
-            کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
-        </p>
 
         <div class="footer-bottom">
 
@@ -191,71 +251,60 @@
 </footer>
 
 
-<!-- فقط یک بار -->
 <script src="script.js"></script>
 
 
 <script>
 
-    // ========================================
-    // هماهنگ کردن مبلغ نهایی با سبد خرید
-    // ========================================
+function updateFinalTotal() {
 
-    function updateFinalTotal() {
+    const finalTotal =
+        document.getElementById("cart-final-total");
 
-        const finalTotal =
-            document.getElementById("cart-final-total");
+    if (!finalTotal) {
+        return;
+    }
 
-        if (!finalTotal) {
-            return;
-        }
+    if (typeof calculateCartTotal !== "function") {
+        return;
+    }
 
-        if (typeof calculateCartTotal !== "function") {
-            return;
-        }
+    finalTotal.textContent =
+        formatPrice(calculateCartTotal());
 
-        finalTotal.textContent =
-            formatPrice(
-                calculateCartTotal()
-            );
+}
+
+
+function updateCheckoutButton() {
+
+    const button =
+        document.getElementById("checkout-button");
+
+    if (!button) {
+        return;
+    }
+
+    if (!Array.isArray(cart) || cart.length === 0) {
+
+        button.style.opacity = "0.45";
+        button.style.pointerEvents = "none";
+
+    } else {
+
+        button.style.opacity = "1";
+        button.style.pointerEvents = "auto";
 
     }
 
-
-    // ========================================
-    // غیرفعال کردن پرداخت وقتی سبد خالی است
-    // ========================================
-
-    function updateCheckoutButton() {
-
-        const button =
-            document.getElementById("checkout-button");
-
-        if (!button) {
-            return;
-        }
-
-        if (!Array.isArray(cart) || cart.length === 0) {
-
-            button.style.opacity = "0.5";
-            button.style.pointerEvents = "none";
-
-        } else {
-
-            button.style.opacity = "1";
-            button.style.pointerEvents = "auto";
-
-        }
-
-    }
+}
 
 
-    // ========================================
-    // اجرای اولیه
-    // ========================================
+setTimeout(() => {
 
     updateFinalTotal();
     updateCheckoutButton();
+
+}, 50);
 
 </script>
 
