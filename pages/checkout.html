@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,117 +12,233 @@
 
 <body>
 
-<header class="site-header">
+<header class="header">
 
     <div class="container header-inner">
 
         <a href="../index.html" class="logo">
-            رهنگر
-            <span>کتاب‌فروشی آنلاین</span>
+
+            <div class="logo-mark">
+                ر
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    کتاب‌فروشی آنلاین
+                </small>
+
+            </div>
+
         </a>
 
-        <nav class="main-nav">
-            <a href="../index.html">خانه</a>
-            <a href="books.html">فروشگاه</a>
-            <a href="cart.html">سبد خرید</a>
-            <a href="account.html">حساب کاربری</a>
+
+        <nav class="nav">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                فروشگاه
+            </a>
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
         </nav>
+
+
+        <div class="header-actions">
+
+            <a href="cart.html" class="cart-btn">
+
+                سبد خرید
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
+            </a>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<main class="container">
+<main>
 
-    <section class="page-header">
+    <!-- =========================
+         عنوان صفحه
+    ========================== -->
 
-        <h1>تسویه حساب</h1>
+    <section class="checkout-hero">
 
-        <p>
-            اطلاعات ارسال سفارش خود را وارد کنید
-        </p>
+        <div class="container">
+
+            <span>
+                RAHNEGAR BOOKSTORE
+            </span>
+
+            <h1>
+                تکمیل سفارش
+            </h1>
+
+            <p>
+                چند قدم تا رسیدن کتاب‌ها به دست شما باقی مانده است.
+            </p>
+
+        </div>
 
     </section>
 
 
-    <section class="checkout-layout">
+    <section class="container checkout-page">
 
 
-        <!-- اطلاعات مشتری -->
+        <!-- =========================
+             اطلاعات خریدار
+        ========================== -->
 
-        <div class="checkout-form">
+        <div class="checkout-main">
 
-            <div class="checkout-box">
+            <div class="checkout-section">
 
-                <h2>اطلاعات مشتری</h2>
+                <div class="checkout-section-heading">
 
-                <div class="form-grid">
-
-                    <div class="form-group">
-
-                        <label>
-                            نام و نام خانوادگی
-                        </label>
-
-                        <input
-                            type="text"
-                            placeholder="نام و نام خانوادگی"
-                        >
-
+                    <div class="checkout-number">
+                        ۱
                     </div>
 
+                    <div>
 
-                    <div class="form-group">
+                        <span>
+                            اطلاعات سفارش
+                        </span>
 
-                        <label>
-                            شماره موبایل
-                        </label>
-
-                        <input
-                            type="tel"
-                            placeholder="۰۹۱۲۱۲۳۴۵۶۷"
-                        >
+                        <h2>
+                            اطلاعات خریدار
+                        </h2>
 
                     </div>
 
                 </div>
 
 
-                <div class="form-group">
+                <div class="checkout-form">
 
-                    <label>
-                        ایمیل
-                    </label>
+                    <div class="form-group">
 
-                    <input
-                        type="email"
-                        placeholder="example@email.com"
-                    >
+                        <label for="first-name">
+                            نام
+                        </label>
+
+                        <input
+                            type="text"
+                            id="first-name"
+                            placeholder="نام خود را وارد کنید"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="last-name">
+                            نام خانوادگی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="last-name"
+                            placeholder="نام خانوادگی"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            شماره موبایل
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="۰۹۱۲۱۲۳۴۵۶۷"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            ایمیل
+                            <small>
+                                اختیاری
+                            </small>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                        >
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- آدرس -->
+            <!-- =========================
+                 آدرس
+            ========================== -->
 
-            <div class="checkout-box">
+            <div class="checkout-section">
 
-                <h2>آدرس ارسال</h2>
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۲
+                    </div>
+
+                    <div>
+
+                        <span>
+                            محل تحویل
+                        </span>
+
+                        <h2>
+                            آدرس ارسال
+                        </h2>
+
+                    </div>
+
+                </div>
 
 
-                <div class="form-grid">
+                <div class="checkout-form">
 
-                    <div class="form-group">
+                    <div class="form-group full">
 
-                        <label>
+                        <label for="province">
                             استان
                         </label>
 
-                        <select>
+                        <select id="province">
 
-                            <option>
+                            <option value="">
                                 انتخاب استان
                             </option>
 
@@ -139,7 +255,19 @@
                             </option>
 
                             <option>
+                                فارس
+                            </option>
+
+                            <option>
                                 خراسان رضوی
+                            </option>
+
+                            <option>
+                                آذربایجان شرقی
+                            </option>
+
+                            <option>
+                                آذربایجان غربی
                             </option>
 
                         </select>
@@ -147,274 +275,305 @@
                     </div>
 
 
-                    <div class="form-group">
+                    <div class="form-group full">
 
-                        <label>
+                        <label for="city">
                             شهر
                         </label>
 
                         <input
                             type="text"
+                            id="city"
                             placeholder="نام شهر"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="address">
+                            نشانی کامل
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="خیابان، کوچه، پلاک، واحد..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="postal-code">
+                            کد پستی
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postal-code"
+                            maxlength="10"
+                            placeholder="۱۰ رقم"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="receiver">
+                            نام تحویل‌گیرنده
+                        </label>
+
+                        <input
+                            type="text"
+                            id="receiver"
+                            placeholder="در صورت تفاوت با خریدار"
                         >
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="form-group">
 
-                    <label>
-                        نشانی کامل
-                    </label>
+            <!-- =========================
+                 روش ارسال
+            ========================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۳
+                    </div>
+
+                    <div>
+
+                        <span>
+                            روش دریافت
+                        </span>
+
+                        <h2>
+                            روش ارسال
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        value="free"
+                        checked
+                    >
+
+                    <div class="shipping-content">
+
+                        <div>
+
+                            <strong>
+                                ارسال عادی
+                            </strong>
+
+                            <p>
+                                تحویل طی ۳ تا ۵ روز کاری
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            رایگان
+                        </strong>
+
+                    </div>
+
+                </label>
+
+
+                <label class="shipping-option">
+
+                    <input
+                        type="radio"
+                        name="shipping"
+                        value="express"
+                    >
+
+                    <div class="shipping-content">
+
+                        <div>
+
+                            <strong>
+                                ارسال سریع
+                            </strong>
+
+                            <p>
+                                تحویل طی ۱ تا ۲ روز کاری
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ۷۵٬۰۰۰ تومان
+                        </strong>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+
+            <!-- =========================
+                 یادداشت
+            ========================== -->
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+
+                    <div class="checkout-number">
+                        ۴
+                    </div>
+
+                    <div>
+
+                        <span>
+                            توضیحات
+                        </span>
+
+                        <h2>
+                            یادداشت سفارش
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group full">
 
                     <textarea
+                        id="order-note"
                         rows="4"
-                        placeholder="نشانی دقیق محل دریافت سفارش"
+                        placeholder="اگر درباره سفارش توضیحی دارید اینجا بنویسید..."
                     ></textarea>
 
                 </div>
-
-
-                <div class="form-group">
-
-                    <label>
-                        کد پستی
-                    </label>
-
-                    <input
-                        type="text"
-                        placeholder="کد پستی ده رقمی"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <!-- روش ارسال -->
-
-            <div class="checkout-box">
-
-                <h2>روش ارسال</h2>
-
-
-                <label class="shipping-option">
-
-                    <input
-                        type="radio"
-                        name="shipping"
-                        checked
-                    >
-
-                    <div>
-
-                        <strong>
-                            ارسال عادی
-                        </strong>
-
-                        <p>
-                            تحویل طی ۳ تا ۵ روز کاری
-                        </p>
-
-                    </div>
-
-                    <span>
-                        ۵۰٬۰۰۰ تومان
-                    </span>
-
-                </label>
-
-
-                <label class="shipping-option">
-
-                    <input
-                        type="radio"
-                        name="shipping"
-                    >
-
-                    <div>
-
-                        <strong>
-                            ارسال سریع
-                        </strong>
-
-                        <p>
-                            تحویل طی ۱ تا ۲ روز کاری
-                        </p>
-
-                    </div>
-
-                    <span>
-                        ۹۰٬۰۰۰ تومان
-                    </span>
-
-                </label>
-
-            </div>
-
-
-            <!-- روش پرداخت -->
-
-            <div class="checkout-box">
-
-                <h2>روش پرداخت</h2>
-
-
-                <label class="payment-option">
-
-                    <input
-                        type="radio"
-                        name="payment"
-                        checked
-                    >
-
-                    <div>
-
-                        <strong>
-                            پرداخت آنلاین
-                        </strong>
-
-                        <p>
-                            پرداخت امن از طریق درگاه بانکی
-                        </p>
-
-                    </div>
-
-                </label>
-
-
-                <label class="payment-option">
-
-                    <input
-                        type="radio"
-                        name="payment"
-                    >
-
-                    <div>
-
-                        <strong>
-                            پرداخت هنگام تحویل
-                        </strong>
-
-                        <p>
-                            در صورت فعال بودن برای محدوده شما
-                        </p>
-
-                    </div>
-
-                </label>
 
             </div>
 
         </div>
 
 
-        <!-- خلاصه سفارش -->
+        <!-- =========================
+             خلاصه سفارش
+        ========================== -->
 
         <aside class="checkout-summary">
 
-            <div class="checkout-box">
+            <div class="summary-top">
+
+                <span>
+                    RAHNEGAR
+                </span>
 
                 <h2>
                     خلاصه سفارش
                 </h2>
 
-
-                <div class="order-product">
-
-                    <div class="product-mini-cover">
-                        📚
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            شرح منظومه
-                        </strong>
-
-                        <p>
-                            تعداد: ۱
-                        </p>
-
-                    </div>
-
-                    <span>
-                        ۴۵۰٬۰۰۰
-                    </span>
-
-                </div>
+            </div>
 
 
-                <div class="summary-row">
-
-                    <span>
-                        جمع کالاها
-                    </span>
-
-                    <strong>
-                        ۴۵۰٬۰۰۰ تومان
-                    </strong>
-
-                </div>
+            <div
+                id="checkout-items"
+                class="checkout-items"
+            >
+            </div>
 
 
-                <div class="summary-row">
-
-                    <span>
-                        تخفیف
-                    </span>
-
-                    <strong>
-                        ۵۰٬۰۰۰ تومان
-                    </strong>
-
-                </div>
+            <div class="checkout-summary-line"></div>
 
 
-                <div class="summary-row">
+            <div class="checkout-summary-row">
 
-                    <span>
-                        ارسال
-                    </span>
+                <span>
+                    جمع کالاها
+                </span>
 
-                    <strong>
-                        ۵۰٬۰۰۰ تومان
-                    </strong>
-
-                </div>
-
-
-                <hr>
-
-
-                <div class="summary-total">
-
-                    <span>
-                        مبلغ قابل پرداخت
-                    </span>
-
-                    <strong>
-                        ۴۵۰٬۰۰۰ تومان
-                    </strong>
-
-                </div>
-
-
-                <button class="btn-primary checkout-button">
-                    پرداخت و ثبت سفارش
-                </button>
-
-
-                <a
-                    href="cart.html"
-                    class="back-to-cart"
-                >
-                    ← بازگشت به سبد خرید
-                </a>
+                <strong id="checkout-subtotal">
+                    ۰ تومان
+                </strong>
 
             </div>
+
+
+            <div class="checkout-summary-row">
+
+                <span>
+                    هزینه ارسال
+                </span>
+
+                <strong id="shipping-price">
+                    رایگان
+                </strong>
+
+            </div>
+
+
+            <div class="checkout-summary-line"></div>
+
+
+            <div class="checkout-total">
+
+                <span>
+                    مبلغ قابل پرداخت
+                </span>
+
+                <strong id="checkout-total">
+                    ۰ تومان
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="pay-button"
+                id="pay-button"
+                onclick="submitOrder()"
+            >
+
+                ثبت سفارش و ادامه پرداخت
+
+                <span>
+                    ←
+                </span>
+
+            </button>
+
+
+            <p class="payment-note">
+
+                پرداخت امن از طریق درگاه بانکی
+
+            </p>
+
+
+            <a
+                href="cart.html"
+                class="back-cart"
+            >
+                ← بازگشت به سبد خرید
+            </a>
 
         </aside>
 
@@ -423,20 +582,14 @@
 </main>
 
 
-<footer class="site-footer">
+<footer class="footer">
 
     <div class="container">
 
-        <h3>
-            رهنگر
-        </h3>
-
-        <p>
-            کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
-        </p>
-
         <div class="footer-bottom">
+
             © تمامی حقوق برای رهنگر محفوظ است.
+
         </div>
 
     </div>
@@ -444,250 +597,232 @@
 </footer>
 
 
-<style>
+<script src="script.js"></script>
 
-.checkout-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
-    gap: 30px;
-    margin-bottom: 70px;
-    align-items: start;
-}
 
-.checkout-form {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
+<script>
 
-.checkout-box {
-    background: #fff;
-    border: 1px solid #eadfce;
-    border-radius: 18px;
-    padding: 28px;
-}
+/* ========================================
+   نمایش محصولات در تسویه حساب
+======================================== */
 
-.checkout-box h2 {
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: #4b2e20;
-}
+function renderCheckout() {
 
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
+    const itemsContainer =
+        document.getElementById("checkout-items");
 
-.form-group {
-    margin-bottom: 20px;
-}
+    const subtotal =
+        document.getElementById("checkout-subtotal");
 
-.form-group:last-child {
-    margin-bottom: 0;
-}
+    const total =
+        document.getElementById("checkout-total");
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #4b2e20;
-    font-weight: 600;
-}
+    const shipping =
+        document.getElementById("shipping-price");
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 13px 15px;
-    border: 1px solid #ded2c2;
-    border-radius: 10px;
-    background: #fffdf9;
-    font-family: inherit;
-    font-size: 14px;
-    outline: none;
-}
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #8b6b4e;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.shipping-option,
-.payment-option {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 18px;
-    margin-bottom: 12px;
-    border: 1px solid #e6dacb;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-.shipping-option:last-child,
-.payment-option:last-child {
-    margin-bottom: 0;
-}
-
-.shipping-option input,
-.payment-option input {
-    accent-color: #4b2e20;
-}
-
-.shipping-option div,
-.payment-option div {
-    flex: 1;
-}
-
-.shipping-option strong,
-.payment-option strong {
-    display: block;
-    color: #4b2e20;
-    margin-bottom: 5px;
-}
-
-.shipping-option p,
-.payment-option p {
-    margin: 0;
-    color: #8b8178;
-    font-size: 13px;
-}
-
-.shipping-option span {
-    white-space: nowrap;
-    font-weight: 600;
-    color: #4b2e20;
-}
-
-.checkout-summary {
-    position: sticky;
-    top: 20px;
-}
-
-.order-product {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee4d7;
-}
-
-.product-mini-cover {
-    width: 55px;
-    height: 70px;
-    border-radius: 8px;
-    background: #f1e8dc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-}
-
-.order-product div:nth-child(2) {
-    flex: 1;
-}
-
-.order-product strong {
-    color: #4b2e20;
-}
-
-.order-product p {
-    margin: 5px 0 0;
-    color: #8b8178;
-    font-size: 13px;
-}
-
-.order-product > span {
-    white-space: nowrap;
-    font-size: 13px;
-}
-
-.summary-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 16px;
-    color: #766b62;
-}
-
-.summary-row strong {
-    color: #4b2e20;
-}
-
-.summary-total {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.summary-total strong {
-    font-size: 19px;
-    color: #4b2e20;
-}
-
-.checkout-button {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 15px;
-}
-
-.back-to-cart {
-    display: block;
-    text-align: center;
-    margin-top: 18px;
-    color: #6d5542;
-    text-decoration: none;
-}
-
-.back-to-cart:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 900px) {
-
-    .checkout-layout {
-        grid-template-columns: 1fr;
+    if (!itemsContainer) {
+        return;
     }
 
-    .checkout-summary {
-        position: static;
+
+    if (!Array.isArray(cart) || cart.length === 0) {
+
+        itemsContainer.innerHTML = `
+
+            <div class="checkout-empty">
+
+                سبد خرید شما خالی است.
+
+            </div>
+
+        `;
+
+        if (subtotal) {
+            subtotal.textContent =
+                formatPrice(0);
+        }
+
+        if (total) {
+            total.textContent =
+                formatPrice(0);
+        }
+
+        return;
+
     }
+
+
+    itemsContainer.innerHTML =
+        cart.map(item => `
+
+            <div class="checkout-item">
+
+                <div class="checkout-item-info">
+
+                    <strong>
+                        ${item.title}
+                    </strong>
+
+                    <span>
+                        تعداد:
+                        ${Number(item.quantity).toLocaleString("fa-IR")}
+                    </span>
+
+                </div>
+
+                <strong>
+                    ${formatPrice(
+                        Number(item.price) *
+                        Number(item.quantity)
+                    )}
+                </strong>
+
+            </div>
+
+        `).join("");
+
+
+    const subtotalValue =
+        calculateCartTotal();
+
+
+    let shippingValue = 0;
+
+
+    const selectedShipping =
+        document.querySelector(
+            'input[name="shipping"]:checked'
+        );
+
+
+    if (
+        selectedShipping &&
+        selectedShipping.value === "express"
+    ) {
+
+        shippingValue = 75000;
+
+    }
+
+
+    subtotal.textContent =
+        formatPrice(subtotalValue);
+
+
+    shipping.textContent =
+        shippingValue === 0
+            ? "رایگان"
+            : formatPrice(shippingValue);
+
+
+    total.textContent =
+        formatPrice(
+            subtotalValue +
+            shippingValue
+        );
 
 }
 
-@media (max-width: 600px) {
 
-    .form-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
+/* ========================================
+   تغییر روش ارسال
+======================================== */
+
+document
+    .querySelectorAll('input[name="shipping"]')
+    .forEach(input => {
+
+        input.addEventListener(
+            "change",
+            renderCheckout
+        );
+
+    });
+
+
+/* ========================================
+   ثبت سفارش موقت
+======================================== */
+
+function submitOrder() {
+
+    if (!Array.isArray(cart) || cart.length === 0) {
+
+        alert(
+            "سبد خرید شما خالی است."
+        );
+
+        return;
+
     }
 
-    .checkout-box {
-        padding: 20px;
+
+    const firstName =
+        document.getElementById(
+            "first-name"
+        ).value.trim();
+
+
+    const lastName =
+        document.getElementById(
+            "last-name"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "phone"
+        ).value.trim();
+
+
+    const address =
+        document.getElementById(
+            "address"
+        ).value.trim();
+
+
+    const city =
+        document.getElementById(
+            "city"
+        ).value.trim();
+
+
+    const postalCode =
+        document.getElementById(
+            "postal-code"
+        ).value.trim();
+
+
+    if (
+        !firstName ||
+        !lastName ||
+        !phone ||
+        !address ||
+        !city ||
+        !postalCode
+    ) {
+
+        alert(
+            "لطفاً اطلاعات ضروری سفارش را کامل کنید."
+        );
+
+        return;
+
     }
 
-    .shipping-option {
-        align-items: flex-start;
-    }
 
-    .shipping-option span {
-        font-size: 13px;
-    }
+    alert(
+        "اطلاعات سفارش با موفقیت دریافت شد.\n\nدر مرحله بعد درگاه پرداخت را متصل می‌کنیم."
+    );
 
 }
 
-</style>
+
+renderCheckout();
+
+</script>
 
 </body>
+
 </html>
