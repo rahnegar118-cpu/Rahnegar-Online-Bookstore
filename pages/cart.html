@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>سبد خرید | رهنگر</title>
+
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
 <header class="site-header">
+
     <div class="container header-inner">
 
         <a href="../index.html" class="logo">
@@ -18,86 +22,143 @@
         </a>
 
         <nav class="main-nav">
-            <a href="../index.html">خانه</a>
-            <a href="books.html">فروشگاه</a>
-            <a href="account.html">حساب کاربری</a>
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                فروشگاه
+            </a>
+
+            <a href="account.html">
+                حساب کاربری
+            </a>
+
+            <a href="cart.html" class="active">
+                سبد خرید
+                <span id="cart-count">۰</span>
+            </a>
+
         </nav>
 
     </div>
+
 </header>
 
 
 <main class="container">
 
     <section class="page-header">
-        <h1>سبد خرید</h1>
-        <p>کتاب‌های انتخاب‌شده شما</p>
+
+        <h1>
+            سبد خرید
+        </h1>
+
+        <p>
+            کتاب‌های انتخاب‌شده شما
+        </p>
+
     </section>
 
 
     <section class="cart-page">
 
-        <div class="cart-items">
 
-            <div class="cart-item">
+        <!-- ============================= -->
+        <!-- محصولات سبد -->
+        <!-- ============================= -->
 
-                <div class="cart-book-cover">
-                    تصویر کتاب
-                </div>
+        <div class="cart-items" id="cart-items">
 
-                <div class="cart-book-info">
-                    <h3>شرح منظومه</h3>
-                    <p>علامه طباطبایی</p>
-                    <span>انتشارات حکمت</span>
-                </div>
-
-                <div class="cart-quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-
-                <div class="cart-price">
-                    ۴۵۰٬۰۰۰ تومان
-                </div>
-
-                <button class="remove-item">
-                    حذف
-                </button>
-
-            </div>
+            <!--
+                محصولات توسط JavaScript
+                اینجا قرار می‌گیرند.
+            -->
 
         </div>
 
 
+        <!-- ============================= -->
+        <!-- خلاصه سفارش -->
+        <!-- ============================= -->
+
         <aside class="cart-summary">
 
-            <h2>خلاصه سفارش</h2>
+            <h2>
+                خلاصه سفارش
+            </h2>
+
 
             <div class="summary-row">
-                <span>جمع کالاها</span>
-                <strong>۴۵۰٬۰۰۰ تومان</strong>
+
+                <span>
+                    جمع کالاها
+                </span>
+
+                <strong id="cart-total">
+                    ۰ تومان
+                </strong>
+
             </div>
 
-            <div class="summary-row">
-                <span>تخفیف</span>
-                <strong>۵۰٬۰۰۰ تومان</strong>
-            </div>
 
             <div class="summary-row">
-                <span>هزینه ارسال</span>
-                <strong>رایگان</strong>
+
+                <span>
+                    تخفیف
+                </span>
+
+                <strong>
+                    ۰ تومان
+                </strong>
+
             </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    هزینه ارسال
+                </span>
+
+                <strong>
+                    محاسبه در مرحله بعد
+                </strong>
+
+            </div>
+
 
             <hr>
 
+
             <div class="summary-total">
-                <span>مبلغ نهایی</span>
-                <strong>۴۰۰٬۰۰۰ تومان</strong>
+
+                <span>
+                    مبلغ نهایی
+                </span>
+
+                <strong id="cart-final-total">
+                    ۰ تومان
+                </strong>
+
             </div>
 
-            <a href="checkout.html" class="btn-primary">
+
+            <a
+                href="checkout.html"
+                class="btn-primary"
+                id="checkout-button"
+            >
                 ادامه فرایند خرید
+            </a>
+
+
+            <a
+                href="books.html"
+                class="continue-shopping"
+            >
+                ← ادامه خرید
             </a>
 
         </aside>
@@ -111,19 +172,93 @@
 
     <div class="container">
 
-        <h3>رهنگر</h3>
+        <h3>
+            رهنگر
+        </h3>
 
         <p>
             کتاب‌هایی برای خواندن، اندیشیدن و بهتر زیستن.
         </p>
 
         <div class="footer-bottom">
+
             © تمامی حقوق برای رهنگر محفوظ است.
+
         </div>
 
     </div>
 
 </footer>
 
+
+<!-- فقط یک بار -->
+<script src="script.js"></script>
+
+
+<script>
+
+    // ========================================
+    // هماهنگ کردن مبلغ نهایی با سبد خرید
+    // ========================================
+
+    function updateFinalTotal() {
+
+        const finalTotal =
+            document.getElementById("cart-final-total");
+
+        if (!finalTotal) {
+            return;
+        }
+
+        if (typeof calculateCartTotal !== "function") {
+            return;
+        }
+
+        finalTotal.textContent =
+            formatPrice(
+                calculateCartTotal()
+            );
+
+    }
+
+
+    // ========================================
+    // غیرفعال کردن پرداخت وقتی سبد خالی است
+    // ========================================
+
+    function updateCheckoutButton() {
+
+        const button =
+            document.getElementById("checkout-button");
+
+        if (!button) {
+            return;
+        }
+
+        if (!Array.isArray(cart) || cart.length === 0) {
+
+            button.style.opacity = "0.5";
+            button.style.pointerEvents = "none";
+
+        } else {
+
+            button.style.opacity = "1";
+            button.style.pointerEvents = "auto";
+
+        }
+
+    }
+
+
+    // ========================================
+    // اجرای اولیه
+    // ========================================
+
+    updateFinalTotal();
+    updateCheckoutButton();
+
+</script>
+
 </body>
+
 </html>
