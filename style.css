@@ -5139,3 +5139,260 @@ img {
 .cart-page .cart-title-row > a {
     flex-shrink: 0;
 }
+/* ================================
+   نسخه موبایل رهنگر
+================================ */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* هدر */
+    .header-inner {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .logo {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 6px;
+    }
+
+    .account-btn,
+    .cart-btn {
+        padding: 9px 11px !important;
+        font-size: 11px !important;
+        border-radius: 12px !important;
+    }
+
+    /* منوی اصلی */
+    .header .nav {
+        order: 3;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
+    }
+
+    .header .nav a {
+        min-width: 0 !important;
+        width: 100%;
+        padding: 9px 5px !important;
+        font-size: 11px !important;
+        border-radius: 12px !important;
+    }
+
+    /* عنوان‌های صفحات */
+    .cart-hero,
+    .page-hero {
+        padding-top: 30px;
+        padding-bottom: 28px;
+    }
+
+    .cart-hero h1,
+    .page-hero h1 {
+        font-size: 30px !important;
+        line-height: 1.5;
+    }
+
+    .cart-eyebrow {
+        font-size: 11px !important;
+        letter-spacing: 3px !important;
+        padding: 6px 14px !important;
+    }
+
+    /* صفحه سبد خرید */
+    .cart-page {
+        display: flex !important;
+        flex-direction: column;
+        gap: 18px;
+        padding-top: 18px;
+        padding-bottom: 25px;
+    }
+
+    .cart-page .cart-main {
+        width: 100%;
+        padding: 14px !important;
+        border-radius: 18px !important;
+    }
+
+    .cart-page .cart-title-row {
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px !important;
+        margin-bottom: 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .cart-selection-text span {
+        font-size: 13px !important;
+    }
+
+    .cart-selection-text small {
+        font-size: 11px !important;
+    }
+
+    .continue-shopping {
+        width: 100%;
+        min-width: 0 !important;
+        padding: 11px 15px !important;
+        border-radius: 13px !important;
+    }
+
+    /* کارت کتاب داخل سبد */
+    .cart-product {
+        display: grid !important;
+        grid-template-columns: 72px 1fr;
+        gap: 12px;
+        padding: 13px !important;
+        border-radius: 16px !important;
+    }
+
+    .cart-product-cover {
+        width: 72px !important;
+        height: 100px !important;
+        grid-row: 1 / span 2;
+    }
+
+    .cart-product-details {
+        min-width: 0;
+    }
+
+    .cart-product-details h3 {
+        font-size: 14px !important;
+        line-height: 1.7;
+        margin: 3px 0 7px;
+    }
+
+    .cart-product-meta {
+        font-size: 11px !important;
+    }
+
+    .cart-product-bottom {
+        display: flex !important;
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 9px;
+        margin-top: 10px;
+    }
+
+    .cart-quantity {
+        justify-content: center;
+    }
+
+    .cart-product-total {
+        grid-column: 1 / -1;
+        padding-top: 10px;
+        border-top: 1px solid rgba(178,138,76,.18);
+        text-align: center;
+    }
+
+    /* خلاصه خرید */
+    .cart-summary {
+        width: 100%;
+        padding: 18px !important;
+        border-radius: 18px !important;
+    }
+
+    .summary-total strong {
+        font-size: 17px !important;
+    }
+
+    .checkout-button {
+        min-height: 54px !important;
+        padding: 13px 16px !important;
+        border-radius: 15px !important;
+        font-size: 13px !important;
+    }
+
+    /* ابزار جستجوی فروشگاه */
+    .books-tools {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .books-tools input,
+    .books-tools select,
+    .category-custom-button {
+        width: 100% !important;
+        min-height: 48px !important;
+        font-size: 13px !important;
+    }
+
+    /* کارت‌های کتاب */
+    .books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .book-card {
+        min-width: 0;
+    }
+
+    .book-card h3 {
+        font-size: 13px !important;
+        line-height: 1.7;
+    }
+
+    .book-card p {
+        font-size: 11px !important;
+    }
+
+    .book-card button,
+    .book-card a {
+        width: 100%;
+        font-size: 11px !important;
+        padding: 9px 7px !important;
+    }
+}
+
+/* موبایل خیلی کوچک */
+@media (max-width: 380px) {
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cart-product {
+        grid-template-columns: 62px 1fr;
+    }
+
+    .cart-product-cover {
+        width: 62px !important;
+        height: 88px !important;
+    }
+}
