@@ -1241,33 +1241,58 @@ button {
     font-weight: 800;
 }
 ```
+```css
+/* ========================================
+   نویسنده و ناشر
+======================================== */
 
 .cart-product-meta {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 7px;
 
-    margin-bottom: 22px;
+    margin-top: 2px;
+    padding: 12px 0 17px;
+
+    border-bottom:
+        1px solid rgba(47, 36, 29, 0.09);
 }
 
 .cart-product-meta p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
     margin: 0;
 
-    color: #766454;
+    color: #75665a;
 
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .cart-product-meta p span {
-    color: #49362a;
+    color: var(--brown);
+
     font-weight: 800;
 }
 
+.cart-product-meta p:first-child::before {
+    content: "✦";
 
-/* =========================================================
-   QUANTITY + UNIT PRICE
-========================================================= */
+    color: var(--gold);
+
+    font-size: 9px;
+}
+
+.cart-product-meta p:last-child::before {
+    content: "✦";
+
+    color: var(--gold);
+
+    font-size: 9px;
+}
+```
 
 .cart-product-bottom {
     display: flex;
