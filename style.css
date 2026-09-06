@@ -1470,40 +1470,54 @@ button {
 /* =========================================================
    REMOVE BUTTON
 ========================================================= */
-
+```css
 .remove-cart {
     position: absolute;
 
-    top: 16px;
-    left: 16px;
-
-    min-width: 58px;
-    height: 35px;
-
-    padding: 0 12px;
-
-    border: 1px solid #dfc8bc;
-    border-radius: 9px;
-
-    background: #fff9f5;
-
-    color: #9a5d4c;
-
-    font-family: inherit;
-    font-size: 11px;
-    font-weight: 800;
-
-    cursor: pointer;
+    top: 18px;
+    left: 18px;
 
     z-index: 10;
 
+    min-width: 60px;
+    height: 34px;
+
+    padding: 0 13px;
+
+    border: 1px solid rgba(164, 92, 82, 0.18);
+
+    border-radius: 11px;
+
+    background: rgba(255, 250, 246, 0.95);
+
+    color: #a45c52;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px rgba(47, 36, 29, 0.04);
+
     transition:
-        background .2s ease,
-        color .2s ease,
-        border-color .2s ease,
-        transform .2s ease,
-        box-shadow .2s ease;
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
 }
+
+.remove-cart:hover {
+    background: #a45c52;
+
+    color: #fff;
+
+    border-color: #a45c52;
+
+    transform: translateY(-1px);
+}
+```
 
 .remove-cart:hover {
     background: #9a5d4c;
