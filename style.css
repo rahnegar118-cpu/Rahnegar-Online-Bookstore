@@ -1067,16 +1067,6 @@ button {
     opacity: 0.85;
 }
 
-.cart-product:hover {
-    transform: translateY(-4px);
-
-    border-color: rgba(178, 138, 76, 0.45);
-
-    box-shadow:
-        0 17px 38px rgba(65, 45, 30, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
-}
-
 .cart-product::before {
     content: "";
 
