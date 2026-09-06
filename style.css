@@ -5439,3 +5439,12 @@ body {
         max-width: 100%;
     }
 }
+
+@media (max-width: 700px) {
+    .cart-btn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
