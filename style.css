@@ -971,7 +971,6 @@ button {
 /* =========================================================
    COMPLETE BOOK CARD
 ========================================================= */
-```css
 .cart-product {
     position: relative;
 
@@ -1067,8 +1066,6 @@ button {
 
     opacity: 0.85;
 }
-```
-
 
 .cart-product:hover {
     transform: translateY(-4px);
