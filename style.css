@@ -1414,23 +1414,42 @@ button {
 /* =========================================================
    PRODUCT TOTAL
 ========================================================= */
-
+```css
 .cart-product-total {
-    align-self: stretch;
+    min-height: 100%;
 
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
     align-items: flex-end;
+    justify-content: center;
 
-    padding-right: 22px;
+    padding-right: 26px;
 
-    border-right: 1px solid #dfd1c0;
-
-    position: relative;
-    z-index: 2;
+    border-right:
+        1px solid rgba(47, 36, 29, 0.10);
 }
+
+.cart-product-total span {
+    margin-bottom: 8px;
+
+    color: #9a8a7d;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.cart-product-total strong {
+    color: var(--gold);
+
+    font-size: 21px;
+    line-height: 1.5;
+
+    font-weight: 900;
+
+    white-space: nowrap;
+}
+```
 
 .cart-product-total span {
     margin-bottom: 7px;
