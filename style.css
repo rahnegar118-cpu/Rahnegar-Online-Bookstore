@@ -541,3 +541,7 @@
     box-shadow:
         0 7px 17px rgba(154, 93, 76, 0.2);
 }
+.cart-product {
+    outline: 8px solid red !important;
+    background: yellow !important;
+}
