@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -14,61 +13,112 @@
 <body>
 
 <header class="header">
+
     <div class="container header-inner">
 
         <a href="../index.html" class="logo">
-            <span class="logo-mark">ر</span>
+
+            <span class="logo-mark">
+                ر
+            </span>
 
             <span class="logo-text">
-                <strong>رهنگر</strong>
-                <small>فروشگاه کتاب</small>
+
+                <strong>
+                    رهنگر
+                </strong>
+
+                <small>
+                    فروشگاه کتاب
+                </small>
+
             </span>
+
         </a>
 
+
         <nav class="nav">
-            <a href="../index.html">خانه</a>
-            <a href="books.html">کتاب‌ها</a>
-            <a href="#">دسته‌بندی‌ها</a>
-            <a href="#">پرفروش‌ها</a>
-            <a href="#">پیشنهاد ویژه</a>
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="books.html">
+                کتاب‌ها
+            </a>
+
+            <a href="#">
+                دسته‌بندی‌ها
+            </a>
+
+            <a href="#">
+                پرفروش‌ها
+            </a>
+
+            <a href="#">
+                پیشنهاد ویژه
+            </a>
+
         </nav>
+
 
         <div class="header-actions">
 
-            <a href="account.html" class="account-btn">
+            <a
+                href="account.html"
+                class="account-btn"
+            >
                 حساب کاربری
             </a>
 
-            <a href="cart.html" class="cart-btn">
+
+            <a
+                href="cart.html"
+                class="cart-btn"
+            >
+
                 سبد خرید
-                <span id="cart-count">۰</span>
+
+                <span id="cart-count">
+                    ۰
+                </span>
+
             </a>
 
         </div>
 
     </div>
+
 </header>
 
 
-<main>
 
-    <!-- عنوان صفحه -->
+<main>
 
     <section class="section">
 
         <div class="container">
 
+
             <div class="section-heading">
 
                 <div>
-                    <span>کتابخانه رهنگر</span>
-                    <h1>همه کتاب‌ها</h1>
+
+                    <span>
+                        کتابخانه رهنگر
+                    </span>
+
+                    <h1>
+                        همه کتاب‌ها
+                    </h1>
+
                 </div>
 
             </div>
 
 
-            <!-- جستجو و فیلتر -->
+
+            <!-- ابزار جستجو -->
 
             <div class="books-tools">
 
@@ -77,6 +127,7 @@
                     id="book-search"
                     placeholder="جستجوی نام کتاب یا نویسنده..."
                 >
+
 
                 <select id="category-filter">
 
@@ -113,21 +164,32 @@
             </div>
 
 
-            <!-- کتاب‌ها -->
 
-            <div class="books-grid" id="books-grid">
+            <!-- =========================
+                 کتاب‌ها
+            ========================== -->
+
+            <div
+                class="books-grid"
+                id="books-grid"
+            >
 
 
-                <!-- شرح منظومه -->
+                <!-- ۱ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
 
                     <a href="book.html">
 
                         <div class="book-cover">
 
                             <div class="cover-placeholder">
+
                                 شرح منظومه
+
                             </div>
 
                         </div>
@@ -141,11 +203,15 @@
                             فلسفه
                         </span>
 
+
                         <h3>
+
                             <a href="book.html">
                                 شرح منظومه
                             </a>
+
                         </h3>
+
 
                         <p>
                             علامه طباطبایی
@@ -158,7 +224,9 @@
                                 ۴۵۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 1,
                                     title: 'شرح منظومه',
@@ -177,17 +245,26 @@
 
 
 
-                <!-- کتاب دوم -->
+                <!-- ۲ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
 
-                    <div class="book-cover">
+                    <a href="book.html">
 
-                        <div class="cover-placeholder">
-                            بدایة الحکمة
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                بدایة الحکمة
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <div class="book-info">
@@ -196,9 +273,11 @@
                             فلسفه
                         </span>
 
+
                         <h3>
                             بدایة الحکمة
                         </h3>
+
 
                         <p>
                             علامه طباطبایی
@@ -211,7 +290,9 @@
                                 ۳۸۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 2,
                                     title: 'بدایة الحکمة',
@@ -230,17 +311,26 @@
 
 
 
-                <!-- کتاب سوم -->
+                <!-- ۳ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="فلسفه"
+                >
 
-                    <div class="book-cover">
+                    <a href="book.html">
 
-                        <div class="cover-placeholder">
-                            نهایة الحکمة
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                نهایة الحکمة
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <div class="book-info">
@@ -249,9 +339,11 @@
                             فلسفه
                         </span>
 
+
                         <h3>
                             نهایة الحکمة
                         </h3>
+
 
                         <p>
                             علامه طباطبایی
@@ -264,7 +356,9 @@
                                 ۴۲۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 3,
                                     title: 'نهایة الحکمة',
@@ -283,17 +377,26 @@
 
 
 
-                <!-- کتاب چهارم -->
+                <!-- ۴ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="اصول"
+                >
 
-                    <div class="book-cover">
+                    <a href="book.html">
 
-                        <div class="cover-placeholder">
-                            رسائل
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                رسائل
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <div class="book-info">
@@ -302,9 +405,11 @@
                             اصول
                         </span>
 
+
                         <h3>
                             رسائل
                         </h3>
+
 
                         <p>
                             شیخ مرتضی انصاری
@@ -317,7 +422,9 @@
                                 ۵۰۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 4,
                                     title: 'رسائل',
@@ -336,17 +443,26 @@
 
 
 
-                <!-- کتاب پنجم -->
+                <!-- ۵ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="فقه"
+                >
 
-                    <div class="book-cover">
+                    <a href="book.html">
 
-                        <div class="cover-placeholder">
-                            مکاسب
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                مکاسب
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <div class="book-info">
@@ -355,9 +471,11 @@
                             فقه
                         </span>
 
+
                         <h3>
                             مکاسب
                         </h3>
+
 
                         <p>
                             شیخ مرتضی انصاری
@@ -370,7 +488,9 @@
                                 ۵۵۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 5,
                                     title: 'مکاسب',
@@ -389,17 +509,26 @@
 
 
 
-                <!-- کتاب ششم -->
+                <!-- ۶ -->
 
-                <article class="book-card">
+                <article
+                    class="book-card"
+                    data-category="اخلاق"
+                >
 
-                    <div class="book-cover">
+                    <a href="book.html">
 
-                        <div class="cover-placeholder">
-                            عنوان بصری
+                        <div class="book-cover">
+
+                            <div class="cover-placeholder">
+
+                                عنوان بصری
+
+                            </div>
+
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <div class="book-info">
@@ -408,9 +537,11 @@
                             اخلاق
                         </span>
 
+
                         <h3>
                             عنوان بصری
                         </h3>
+
 
                         <p>
                             مجموعه اخلاقی
@@ -423,7 +554,9 @@
                                 ۲۹۰٬۰۰۰ تومان
                             </strong>
 
+
                             <button
+                                type="button"
                                 onclick="addToCart({
                                     id: 6,
                                     title: 'عنوان بصری',
@@ -462,77 +595,106 @@
 </footer>
 
 
+
+<!-- فقط یک بار -->
+
 <script src="script.js"></script>
+
+
+
 <script>
 
-    /*
-    جستجوی ساده کتاب‌ها
-    */
+/* =====================================================
+   جستجو و فیلتر کتاب‌ها
+===================================================== */
 
-    const searchInput =
-        document.getElementById("book-search");
+const searchInput =
+    document.getElementById("book-search");
 
-    const categoryFilter =
-        document.getElementById("category-filter");
+const categoryFilter =
+    document.getElementById("category-filter");
 
-    const bookCards =
-        document.querySelectorAll(".book-card");
-
-
-    function filterBooks() {
-
-        const search =
-            searchInput.value.toLowerCase();
-
-        const category =
-            categoryFilter.value;
+const bookCards =
+    document.querySelectorAll(".book-card");
 
 
-        bookCards.forEach(card => {
+function filterBooks() {
 
-            const text =
-                card.innerText.toLowerCase();
-
-            const cardCategory =
-                card.querySelector(".book-category")?.innerText.trim();
-
-
-            const matchesSearch =
-                text.includes(search);
-
-            const matchesCategory =
-                category === "all" ||
-                cardCategory === category;
+    const search =
+        searchInput.value
+            .trim()
+            .toLowerCase();
 
 
-            if (matchesSearch && matchesCategory) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    }
+    const category =
+        categoryFilter.value;
 
 
-    searchInput.addEventListener(
-        "input",
-        filterBooks
-    );
+    bookCards.forEach(card => {
+
+        const text =
+            card.innerText
+                .toLowerCase();
 
 
-    categoryFilter.addEventListener(
-        "change",
-        filterBooks
-    );
+        const cardCategory =
+            card.dataset.category;
+
+
+        const matchesSearch =
+            text.includes(search);
+
+
+        const matchesCategory =
+            category === "all" ||
+            cardCategory === category;
+
+
+        if (
+            matchesSearch &&
+            matchesCategory
+        ) {
+
+            card.style.display = "";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    filterBooks
+);
+
+
+categoryFilter.addEventListener(
+    "change",
+    filterBooks
+);
+
+
+/* =====================================================
+   اجرای اولیه
+===================================================== */
+
+if (
+    typeof updateCartCount === "function"
+) {
+
+    updateCartCount();
+
+}
 
 </script>
+
+
 </body>
 
 </html>
-```
